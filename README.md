@@ -1,24 +1,42 @@
-# README
+# Wardrobe-App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Project description 
+------
 
-Things you may want to cover:
+An app to help people find clothes that match, which reduces time spent getting ready in the morning.
 
-* Ruby version
+User Stories
+------
 
-* System dependencies
+MVP Interaction:
 
-* Configuration
+As a user,
+I can select colours on the screen,
+So I can see how they work together.
 
-* Database creation
+As a user,
+I can see positive or negative feedback from the computer based on my decision,
+So that I don't become a fashion victim.
 
-* Database initialization
+Features
+------
 
-* How to run the test suite
+How to Use
+--------
 
-* Services (job queues, cache servers, search engines, etc.)
+How to Test
+-------
 
-* Deployment instructions
+How to Deploy
+-------
 
-* ...
+Technologies Used 
+------
+
+By
+---
+Antonio D'aria
+Florence Hapgood
+Laura Jackson
+Cristina Ocana
+
