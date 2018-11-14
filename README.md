@@ -51,13 +51,9 @@ Technologies Used
 ------
 
 - [Rails](https://rubyonrails.org/)
-
 - [PostgreSQL](https://www.postgresql.org/)
-
 - [Devise](https://github.com/plataformatec/devise)
-
 - [RSpec](http://rspec.info/)
-
 - [Capybara](https://github.com/teamcapybara/capybara)
 
 By
