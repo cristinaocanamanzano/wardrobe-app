@@ -1,0 +1,32 @@
+
+language: ruby
+
+cache: bundler
+
+rvm:
+  - 2.5.0
+
+dist: trusty
+
+services:
+  - postgresql
+
+before_script:
+  - bundle
+  - bundle exec rails db:create
+  - bundle exec rails db:migrate RAILS_ENV=test
+
+
+test:
+  adapter: postgresql
+  database: travis_ci_test
+
+script:
+  - bundle exec rspec
+  - bundle exec rubocop
+
+after_success:
+  - coveralls
+
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
