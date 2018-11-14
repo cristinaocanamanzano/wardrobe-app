@@ -9,14 +9,27 @@ User Stories
 ------
 
 MVP Interaction:
+```
+As a user,
+I can sign up,
+So that I can have my own profile.
 
 As a user,
-I can select colours on the screen,
-So I can see how they work together.
+I can log in to my account
+So that I can use the website.
 
 As a user,
-I can see positive or negative feedback from the computer based on my decision,
-So that I don't become a fashion victim.
+I ca log out of my account
+So that my session is closed.
+
+As a user,
+I can upload pictures of my clothes
+So that they are stored in my account.
+
+As a user,
+I can view all the pictures I have uploaded
+So that I can make a decision on which clothes to pick.
+```
 
 Features
 ------
@@ -35,8 +48,8 @@ Technologies Used
 
 By
 ---
-Antonio D'aria
-Florence Hapgood
-Laura Jackson
-Cristina Ocana
+- Antonio D'aria
+- Florence Hapgood
+- Laura Jackson
+- Cristina Ocana
 
