@@ -2,6 +2,8 @@
   "RSpec": {
     "coverage": {
       "/Users/cristinaocana/Desktop/Projects/wardrobe-app/app/models/user.rb": [
+        null,
+        null,
         1,
         null,
         null,
@@ -10,39 +12,51 @@
         null
       ],
       "/Users/cristinaocana/Desktop/Projects/wardrobe-app/app/models/application_record.rb": [
+        null,
+        null,
         1,
         1,
         null
       ],
       "/Users/cristinaocana/Desktop/Projects/wardrobe-app/app/helpers/application_helper.rb": [
+        null,
+        null,
         1,
         null
       ],
       "/Users/cristinaocana/Desktop/Projects/wardrobe-app/app/helpers/index_helper.rb": [
+        null,
+        null,
         1,
         null
       ],
       "/Users/cristinaocana/Desktop/Projects/wardrobe-app/app/helpers/welcome_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/cristinaocana/Desktop/Projects/wardrobe-app/app/controllers/welcome_controller.rb": [
-        1,
-        1,
         null,
-        null
-      ],
-      "/Users/cristinaocana/Desktop/Projects/wardrobe-app/app/controllers/application_controller.rb": [
-        1,
-        1,
+        null,
         1,
         null
       ],
       "/Users/cristinaocana/Desktop/Projects/wardrobe-app/app/controllers/index_controller.rb": [
-        0,
-        0
+        null,
+        1,
+        null
+      ],
+      "/Users/cristinaocana/Desktop/Projects/wardrobe-app/app/controllers/application_controller.rb": [
+        null,
+        null,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/cristinaocana/Desktop/Projects/wardrobe-app/app/controllers/welcome_controller.rb": [
+        null,
+        null,
+        1,
+        1,
+        null
       ]
     },
-    "timestamp": 1542206078
+    "timestamp": 1542208541
   }
 }
