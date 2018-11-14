@@ -4,9 +4,7 @@ RSpec.feature 'uploading photos', type: :feature do
 
   scenario 'A user can upload an image and see it on the items page' do
     visit ("/items")
-    expect(page).to have_content('Items')
     click_link ("New Item")
-    expect(page).to have_content('New Item')
     attach_file('item[image]', File.join(Rails.root + 'spec/fixtures/clueless.jpg'))
     select "blue", from: 'item[colour]'
     click_button "Create Item"
