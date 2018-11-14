@@ -29,6 +29,10 @@ So that they are stored in my account.
 As a user,
 I can view all the pictures I have uploaded
 So that I can make a decision on which clothes to pick.
+
+As a user,
+I can select two items of clothes
+So that I can compare them by seeing them on the screen.
 ```
 
 Features
