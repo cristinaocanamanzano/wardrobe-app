@@ -23,6 +23,7 @@ SimpleCov.start 'rails' do
   add_filter '/app/jobs/'
   add_filter '/spec/' # for rspec
   add_filter '/test/' # for minitest
+  add_filter '/app/controllers/'
 end
 
 SimpleCov.at_exit do
