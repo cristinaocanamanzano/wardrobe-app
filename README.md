@@ -19,7 +19,7 @@ I can log in to my account
 So that I can use the website.
 
 As a user,
-I ca log out of my account
+I can log out of my account
 So that my session is closed.
 
 As a user,
