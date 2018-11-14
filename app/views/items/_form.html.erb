@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= form.label :colour %>
-    <%= form.text_field :colour %>
+    <%= form.select(:colour, Colour::SELECTION) %>
   </div>
 
   <div class="field">
-    
+
     <%= form.file_field :image %>
   </div>
 
