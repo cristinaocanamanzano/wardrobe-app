@@ -52,8 +52,8 @@ Technologies Used
 
 By
 ---
-- Antonio D'aria
-- Florence Hapgood
-- Laura Jackson
-- Cristina Ocana
+- [Antonio D'aria](https://github.com/AntonioDaria)
+- [Florence Hapgood](https://github.com/FlorenceHapgood)
+- [Laura Jackson](https://github.com/ShinyVerse)
+- [Cristina María Ocaña Manzano](https://github.com/cristinaocanamanzano)
 
