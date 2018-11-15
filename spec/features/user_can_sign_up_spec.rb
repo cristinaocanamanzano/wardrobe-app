@@ -10,12 +10,7 @@ RSpec.feature 'Sign up', type: :feature do
   end
 
   scenario 'allows a user to sign up' do
-    visit('/')
-    click_link('Sign up')
-    fill_in('user_email', with: 'testemail@gmail.com')
-    fill_in('user_password', with: 'password1234')
-    fill_in('user_password_confirmation', with: 'password1234')
-    click_button('Sign up')
+    sign_up_helper
     expect(page).to have_content('Welcome! You have signed up successfully.')
   end
 end

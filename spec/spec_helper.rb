@@ -5,7 +5,7 @@ require 'database_cleaner'
 require 'simplecov'
 require 'simplecov-console'
 require 'rake'
-# require_relative './features/web_helpers.rb'
+require_relative './features/web_helpers.rb'
 require 'pry'
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new(
