@@ -29,4 +29,35 @@ RSpec.feature 'Sign up, log in, log out', type: :feature do
     click_button('Sign up')
     expect(page).to have_content("Email can't be blank")
   end
+
+  scenario 'throws an error if user does not enter password when signing up' do
+    visit('/')
+    click_link('Sign up')
+    fill_in('user_password', with: 'password1234')
+    click_button('Sign up')
+    expect(page).to have_content("Password confirmation doesn't match")
+  end
+
+  scenario "user can log out" do
+    visit('/')
+    click_link('Sign up')
+    fill_in('user_email', with: 'testemail@gmail.com')
+    fill_in('user_password', with: 'password1234')
+    fill_in('user_password_confirmation', with: 'password1234')
+    click_button('Sign up')
+    expect(page).to have_content('Welcome! You have signed up successfully.')
+    click_link("Logout")
+    expect(page).to have_content("Signed out successfully")
+  end
+
+  scenario 'throws and error message is email is invalid' do
+    visit('/')
+    click_link('Sign up')
+    fill_in('user_email', with: 'testemail')
+    fill_in('user_password', with: 'password1234')
+    fill_in('user_password_confirmation', with: 'password1234')
+    click_button('Sign up')
+    expect(page).to have_content('Email is invalid')
+  end
+
 end
