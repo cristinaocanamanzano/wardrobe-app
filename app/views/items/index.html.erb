@@ -3,15 +3,22 @@
 <h1>Items</h1>
 
   <p>
+
+<form action="/clothes_selection" method="get">
+
+
     <% @items.each do |item| %>
 
       <%= image_tag(item.image_url.to_s, width: 300) %>
       Colour: <%= item.colour %>
+       <input type="checkbox" name="item-<%=item.id%>" value=<%=item.id%> id=<%=item.id%> > <br>
       <%= link_to 'Show', item %>
       <%= link_to 'Edit', edit_item_path(item) %>
       <%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %>
       <br>
     <% end %>
+    <input type="submit" value="Submit">
+</form>
   </p>
 
 
