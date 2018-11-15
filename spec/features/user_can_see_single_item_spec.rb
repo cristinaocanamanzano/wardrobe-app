@@ -3,6 +3,7 @@ require 'rails_helper.rb'
 
 RSpec.feature 'viewing individual items', type: :feature do
   scenario 'A user can click on an image and see it by itself' do
+
     sign_up_helper
     add_item
     click_link 'Back'
