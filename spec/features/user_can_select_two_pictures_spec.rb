@@ -49,7 +49,6 @@ RSpec.feature 'selecting two pictures', type: :feature do
     select 'red', from: 'item[colour]'
     click_button 'Create Item'
     click_link 'Back'
-    save_and_open_page
     page.check('item-1')
     page.check('item-3')
     click_button 'Submit'
