@@ -10,5 +10,7 @@ Rails.application.routes.draw do
 
   root to: redirect('/users/sign_in')
 
+  get '/clothes_selection', to: 'clothes_selection#show'
+
   resources :items
 end
