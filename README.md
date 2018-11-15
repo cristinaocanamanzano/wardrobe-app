@@ -37,12 +37,19 @@ So that I can compare them by seeing them on the screen.
 
 Features
 ------
+- Users can add their items of clothing and see them displayed
+- Users can select two items of clothing to compare and see them on a new page
+- Users can signup, login and logout
 
 How to Use
 --------
+- Clone this repo
+- Bundle install
+- "Rails Server" in the console will run the application locally.
 
 How to Test
 -------
+- Run rspec in the terminal
 
 How to Deploy
 -------
@@ -55,6 +62,7 @@ Technologies Used
 - [Devise](https://github.com/plataformatec/devise)
 - [RSpec](http://rspec.info/)
 - [Capybara](https://github.com/teamcapybara/capybara)
+- [CarrierWave](https://github.com/carrierwaveuploader/carrierwave)
 
 By
 ---
