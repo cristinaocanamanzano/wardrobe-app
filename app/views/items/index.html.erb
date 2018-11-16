@@ -1,11 +1,16 @@
 <p id="notice"><%= notice %></p>
 
+
+
 <h1>Items</h1>
 
-  <p>
+<h2>Tops</h2>
+
+
+<h2>Bottoms</h2>
+
 
 <form action="/clothes_selection" method="get">
-
 
     <% @items.each do |item| %>
 
@@ -19,7 +24,6 @@
     <% end %>
     <input type="submit" value="Submit">
 </form>
-  </p>
 
 
 <br>

@@ -6,6 +6,13 @@ class ItemsController < ApplicationController
   def index
     @user = current_user
     @items = @user.items
+    # @tops = @items.map { |item| item.type == "top" }
+  #   @items.each{ |item|
+  #    if item.type == "top"
+  #        @tops << item
+  #   end
+  # }
+
   end
 
   # GET /items/1

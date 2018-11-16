@@ -16,7 +16,7 @@ class Colour
                   {"gold": ["navy", "brown", "black"]}
                  ]
 
-
+  ITEM_TYPE =  ["top", "bottom"]
 
   def return_match_message(item1, item2)
     item1 = item1.to_sym
