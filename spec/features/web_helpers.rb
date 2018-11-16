@@ -20,5 +20,6 @@ def add_item(image)
   click_link 'New Item'
   attach_file('item[image]', File.join(Rails.root + 'spec/fixtures' + image))
   select 'navy', from: 'item[colour]'
+  select 'top', from: 'item[type]'
   click_button 'Create Item'
 end

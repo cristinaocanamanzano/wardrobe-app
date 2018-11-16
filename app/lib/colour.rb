@@ -9,7 +9,7 @@ class Colour
                   {"pink": ["navy", "green", "purple", "grey"]},
                   {"orange": ["black", "purple", "navy"]},
                   {"brown": ["white", "green", "black", "purple"]},
-                  {"black": ["white", "black", "red", "orange", "gold", "silver"]},
+                  {"black": ["white", "black", "red", "orange", "gold", "silver", "light-blue"]},
                   {"white": ["red", "purple", "pink", "black"]},
                   {"purple": ["white", "brown", "green", "silver"]},
                   {"silver": ["purple", "black", "purple", "red", "pink"]},
@@ -24,9 +24,9 @@ class Colour
     color_rules.each do |hash|
       if hash.has_key?(item1)
         if hash[item1].include?(item2)
-          return message = "Rollin' with the homies!"
+           return "Rollin' with the homies!"
         else
-          return message = "Fashion victim alert!!"
+          return "Fashion victim alert!!"
         end
       end
     end
