@@ -5,7 +5,7 @@ RSpec.feature 'editing items', type: :feature do
   scenario 'A user can edit the color of the item' do
     sign_up_helper
     add_item("clueless.jpg")
-    expect(page).to have_content("blue")
+    expect(page).to have_content("navy")
     click_link 'Back'
     expect(page).to have_css("img[src*='clueless.jpg']")
     click_link 'Edit'
