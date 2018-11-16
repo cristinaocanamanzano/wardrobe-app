@@ -7,9 +7,9 @@ def sign_up_helper
   click_button('Sign up')
 end
 
-def add_item
+def add_item(image)
   click_link 'New Item'
-  attach_file('item[image]', File.join(Rails.root + 'spec/fixtures/clueless.jpg'))
+  attach_file('item[image]', File.join(Rails.root + 'spec/fixtures' + image))
   select 'blue', from: 'item[colour]'
   click_button 'Create Item'
 end

@@ -34,12 +34,7 @@ RSpec.feature 'Sign up, log in, log out', type: :feature do
   end
 
   scenario "user can log out" do
-    visit('/')
-    click_link('Sign up')
-    fill_in('user_email', with: 'testemail@gmail.com')
-    fill_in('user_password', with: 'password1234')
-    fill_in('user_password_confirmation', with: 'password1234')
-    click_button('Sign up')
+    sign_up_helper
     expect(page).to have_content('Welcome! You have signed up successfully.')
     click_link("Logout")
     expect(page).to have_content("Signed out successfully")

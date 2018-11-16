@@ -3,9 +3,8 @@ require 'rails_helper.rb'
 
 RSpec.feature 'viewing individual items', type: :feature do
   scenario 'A user can click on an image and see it by itself' do
-
     sign_up_helper
-    add_item
+    add_item("clueless.jpg")
     click_link 'Back'
     click_link 'Show'
     expect(page).to have_content('Back')
