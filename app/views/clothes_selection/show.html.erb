@@ -1,7 +1,6 @@
 
-<% @items_array.each do |item| %>
-<% array = item.split("=") %>
-<% number = array[1] %>
-<% garment = Item.find(number) %>
-  <%= image_tag(garment.image_url.to_s, width: 300) %>
+<% @item_collection.each do |item| %>
+  <%= image_tag(item.image_url.to_s, width: 300) %>
 <% end %>
+
+<p><%= @message %></p>
