@@ -29,7 +29,7 @@ RSpec.feature "computer_matches_clothes" do
     click_button 'Submit'
     expect(page).to have_css("img[src*='clueless.jpg']")
     expect(page).to have_css("img[src*='jumpsuit.jpg']")
-    expect(page).to have_content("You go girl!")
+    expect(page).to have_content("Rollin' with the homies!")
   end
 
 end
