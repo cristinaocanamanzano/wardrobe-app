@@ -3,7 +3,7 @@ require 'rails_helper.rb'
 
 RSpec.feature 'editing items', type: :feature do
   scenario 'A user can edit the color of the item' do
-    sign_up_helper
+    sign_up_helper('testuser1@gmail.com')
     add_item("clueless.jpg")
     expect(page).to have_content("navy")
     click_link 'Back'

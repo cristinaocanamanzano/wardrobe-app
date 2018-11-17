@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.feature 'deleting photos' do
   scenario 'user can delete photos' do
-    sign_up_helper
+    sign_up_helper('testuser1@gmail.com')
     add_item("clueless.jpg")
     click_link 'Back'
     click_link 'Destroy'

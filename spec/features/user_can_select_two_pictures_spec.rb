@@ -2,7 +2,7 @@ require 'rails_helper.rb'
 
 RSpec.feature 'selecting two pictures', type: :feature do
   scenario 'A user can select two images and see it on the selection page' do
-    sign_up_helper
+    sign_up_helper('testuser1@gmail.com')
     add_item('clueless.jpg')
     click_link 'Back'
     add_item('jumpsuit.jpg')
@@ -15,7 +15,7 @@ RSpec.feature 'selecting two pictures', type: :feature do
   end
 
   scenario 'Page to compare clothes only shows selected items' do
-    sign_up_helper
+    sign_up_helper('testuser1@gmail.com')
     add_item('clueless.jpg')
     click_link 'Back'
     add_item('jumpsuit.jpg')

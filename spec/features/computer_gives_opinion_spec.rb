@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.feature "computer_matches_clothes" do
   scenario 'no match' do
-    sign_up_helper
+    sign_up_helper('testuser1@gmail.com')
     add_item('clueless.jpg')
     click_link 'Back'
     add_item('jumpsuit.jpg')
@@ -16,7 +16,7 @@ RSpec.feature "computer_matches_clothes" do
   end
 
   scenario 'match' do
-    sign_up_helper
+    sign_up_helper('testuser1@gmail.com')
     add_item('clueless.jpg')
     click_link 'Back'
     click_link 'New Item'
