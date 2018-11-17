@@ -22,6 +22,7 @@ RSpec.feature "computer_matches_clothes" do
     click_link 'New Item'
     attach_file('item[image]', File.join(Rails.root + 'spec/fixtures/jumpsuit.jpg'))
     select 'gold', from: 'item[colour]'
+    select 'top', from: 'item[clothes_type]'
     click_button 'Create Item'
     click_link 'Back'
     page.check('item-1')

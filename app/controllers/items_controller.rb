@@ -6,6 +6,8 @@ class ItemsController < ApplicationController
   def index
     @user = current_user
     @items = @user.items
+    @tops = @items.select { |item| item.clothes_type == "top" }
+    @bottoms = @items.select { |item| item.clothes_type == "bottom" } 
   end
 
   # GET /items/1
@@ -70,6 +72,6 @@ class ItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:item).permit(:colour, :image)
+      params.require(:item).permit(:colour, :image, :clothes_type)
     end
 end
