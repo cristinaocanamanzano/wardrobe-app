@@ -2,11 +2,9 @@ require "rails_helper"
 
 RSpec.feature "computer_matches_clothes" do
   scenario 'no match' do
-    sign_up_helper('testuser1@gmail.com')
-    add_item('clueless.jpg')
-    click_link 'Back'
-    add_item('jumpsuit.jpg')
-    click_link 'Back'
+    sign_up('testuser1@gmail.com')
+    add_item('clueless.jpg', 'navy', 'top')
+    add_item('jumpsuit.jpg', 'navy', 'top')
     page.check('item-1')
     page.check('item-2')
     click_button 'Submit'
@@ -16,15 +14,9 @@ RSpec.feature "computer_matches_clothes" do
   end
 
   scenario 'match' do
-    sign_up_helper('testuser1@gmail.com')
-    add_item('clueless.jpg')
-    click_link 'Back'
-    click_link 'New Item'
-    attach_file('item[image]', File.join(Rails.root + 'spec/fixtures/jumpsuit.jpg'))
-    select 'gold', from: 'item[colour]'
-    select 'top', from: 'item[clothes_type]'
-    click_button 'Create Item'
-    click_link 'Back'
+    sign_up('testuser1@gmail.com')
+    add_item('clueless.jpg', 'navy', 'top')
+    add_item('jumpsuit.jpg', 'red', 'top')
     page.check('item-1')
     page.check('item-2')
     click_button 'Submit'
