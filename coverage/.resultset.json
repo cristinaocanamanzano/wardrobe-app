@@ -25,6 +25,10 @@
         1,
         null
       ],
+      "/Users/laura/Projects/wardrobe-app/app/helpers/clothes_carousel_helper.rb": [
+        1,
+        null
+      ],
       "/Users/laura/Projects/wardrobe-app/app/helpers/clothes_selection_helper.rb": [
         1,
         null
@@ -70,7 +74,7 @@
         null,
         null,
         1,
-        65,
+        69,
         null,
         null,
         null,
@@ -96,7 +100,7 @@
         null,
         null,
         1,
-        32,
+        34,
         null,
         null,
         null,
@@ -144,6 +148,6 @@
         null
       ]
     },
-    "timestamp": 1542454863
+    "timestamp": 1542463538
   }
 }

@@ -1,0 +1,29 @@
+
+<h1>Explore your closet</h1>
+<style media="screen">
+  .item {
+    height: 180px;
+    width: 180px;
+    color: red;
+
+    margin: 10px;
+  }
+  .your-class {
+    width: 75%;
+  }
+  body {
+    background: pink;
+  }
+
+</style>
+
+<div id="tops-carousel" class="slider">
+  <% @tops.each do |item| %>
+    <div id="<%= item.id %>" class="item"><%= image_tag(item.image_url.to_s, width: 200)  %></div>
+  <% end %>
+</div>
+<div id="bottoms-carousel" class="slider">
+  <% @bottoms.each do |item| %>
+    <div id="<%= item.id %>" class="item"><%= image_tag(item.image_url.to_s, width: 200)  %></div>
+  <% end %>
+</div>
