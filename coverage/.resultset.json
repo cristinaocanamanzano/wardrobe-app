@@ -1,97 +1,141 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/cristinaocana/Desktop/Projects/wardrobe-app/app/models/user.rb": [
+      "/Users/laura/Projects/wardrobe-app/app/models/user.rb": [
         null,
         null,
         1,
         null,
         null,
+        1,
         1,
         null,
         null
       ],
-      "/Users/cristinaocana/Desktop/Projects/wardrobe-app/app/models/application_record.rb": [
+      "/Users/laura/Projects/wardrobe-app/app/models/application_record.rb": [
         null,
         null,
         1,
         1,
         null
       ],
-      "/Users/cristinaocana/Desktop/Projects/wardrobe-app/app/helpers/application_helper.rb": [
-        null,
-        null,
-        1,
-        null
-      ],
-      "/Users/cristinaocana/Desktop/Projects/wardrobe-app/app/helpers/index_helper.rb": [
+      "/Users/laura/Projects/wardrobe-app/app/helpers/application_helper.rb": [
         null,
         null,
         1,
         null
       ],
-      "/Users/cristinaocana/Desktop/Projects/wardrobe-app/app/helpers/items_helper.rb": [
+      "/Users/laura/Projects/wardrobe-app/app/helpers/clothes_selection_helper.rb": [
         1,
         null
       ],
-      "/Users/cristinaocana/Desktop/Projects/wardrobe-app/app/helpers/welcome_helper.rb": [
+      "/Users/laura/Projects/wardrobe-app/app/helpers/index_helper.rb": [
         null,
         null,
         1,
         null
       ],
-      "/Users/cristinaocana/Desktop/Projects/wardrobe-app/app/models/colour.rb": [
+      "/Users/laura/Projects/wardrobe-app/app/helpers/items_helper.rb": [
+        null,
+        null,
+        1,
+        null
+      ],
+      "/Users/laura/Projects/wardrobe-app/app/helpers/welcome_helper.rb": [
+        null,
+        null,
+        1,
+        null
+      ],
+      "/Users/laura/Projects/wardrobe-app/app/models/item.rb": [
+        null,
+        null,
+        1,
         1,
         1,
         null
       ],
-      "/Users/cristinaocana/Desktop/Projects/wardrobe-app/app/models/item.rb": [
+      "/Users/laura/Projects/wardrobe-app/app/uploaders/image_uploader.rb": [
+        null,
+        null,
         1,
+        null,
+        null,
+        null,
+        null,
+        null,
         1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        65,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        32,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null
       ],
-      "/Users/cristinaocana/Desktop/Projects/wardrobe-app/app/uploaders/image_uploader.rb": [
+      "/Users/laura/Projects/wardrobe-app/app/lib/colour.rb": [
+        1,
+        1,
+        null,
         1,
         null,
         null,
         null,
         null,
         null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         1,
         null,
-        null,
-        null,
-        null,
         1,
+        4,
+        4,
+        4,
+        8,
+        4,
+        1,
+        null,
         3,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        2,
-        null,
-        null,
         null,
         null,
         null,
@@ -100,6 +144,6 @@
         null
       ]
     },
-    "timestamp": 1542238235
+    "timestamp": 1542454228
   }
 }
