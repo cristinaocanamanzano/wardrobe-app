@@ -8,8 +8,6 @@ RSpec.feature "computer_matches_clothes" do
     page.check('item-1')
     page.check('item-2')
     click_button 'Submit'
-    expect(page).to have_css("img[src*='clueless.jpg']")
-    expect(page).to have_css("img[src*='jumpsuit.jpg']")
     expect(page).to have_content("Fashion victim alert!!")
   end
 
@@ -20,8 +18,6 @@ RSpec.feature "computer_matches_clothes" do
     page.check('item-1')
     page.check('item-2')
     click_button 'Submit'
-    expect(page).to have_css("img[src*='clueless.jpg']")
-    expect(page).to have_css("img[src*='jumpsuit.jpg']")
     expect(page).to have_content("Rollin' with the homies!")
   end
 

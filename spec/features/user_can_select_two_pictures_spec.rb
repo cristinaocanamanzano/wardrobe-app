@@ -5,17 +5,6 @@ RSpec.feature 'selecting two pictures', type: :feature do
     sign_up('testuser1@gmail.com')
     add_item('clueless.jpg', 'navy', 'top')
     add_item('jumpsuit.jpg', 'navy', 'top')
-    page.check('item-1')
-    page.check('item-2')
-    click_button 'Submit'
-    expect(page).to have_css("img[src*='clueless.jpg']")
-    expect(page).to have_css("img[src*='jumpsuit.jpg']")
-  end
-
-  scenario 'Page to compare clothes only shows selected items' do
-    sign_up('testuser1@gmail.com')
-    add_item('clueless.jpg', 'navy', 'top')
-    add_item('jumpsuit.jpg', 'navy', 'top')
     add_item('jumper.jpeg', 'navy', 'top')
     page.check('item-1')
     page.check('item-3')
@@ -24,4 +13,5 @@ RSpec.feature 'selecting two pictures', type: :feature do
     expect(page).to have_css("img[src*='jumper.jpeg']")
     expect(page).not_to have_css("img[src*='jumpsuit.jpg']")
   end
+
 end
