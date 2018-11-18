@@ -26,5 +26,11 @@ class ClothesSelectionController < ApplicationController
 
 
     @message_1 = Colour.new.return_match_message(main_colour, secondary_colour)
+
+   puts @message_1
+   puts @message_2
+
+    @overall_message = Final_Judgement.new.overall_match(@message_1, @message_2)
   end
+
 end
