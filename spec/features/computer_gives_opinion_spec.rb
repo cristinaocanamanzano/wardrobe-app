@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.feature "computer_matches_clothes" do
-  scenario 'no match' do
+  scenario 'no colour match' do
     sign_up('testuser1@gmail.com')
     add_item('clueless.jpg', 'navy', 'top', 'formal')
     add_item('jumpsuit.jpg', 'navy', 'top', 'formal')
@@ -11,7 +11,7 @@ RSpec.feature "computer_matches_clothes" do
     expect(page).to have_content("Fashion victim alert!!")
   end
 
-  scenario 'match' do
+  scenario 'colour match' do
     sign_up('testuser1@gmail.com')
     add_item('clueless.jpg', 'navy', 'top', 'formal')
     add_item('jumpsuit.jpg', 'red', 'top', 'formal')
@@ -19,6 +19,16 @@ RSpec.feature "computer_matches_clothes" do
     page.check('item-2')
     click_button 'Submit'
     expect(page).to have_content("Rollin' with the homies!")
+  end
+
+  scenario 'no formal match' do
+    sign_up('testuser1@gmail.com')
+    add_item('clueless.jpg', 'navy', 'top', 'formal')
+    add_item('jumpsuit.jpg', 'navy', 'top', 'informal')
+    page.check('item-1')
+    page.check('item-2')
+    click_button 'Submit'
+    expect(page).to have_content("You have put a formal and an informal item together")
   end
 
 end
