@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper.rb'
 
 RSpec.feature 'selecting two pictures', type: :feature do
@@ -13,5 +15,4 @@ RSpec.feature 'selecting two pictures', type: :feature do
     expect(page).to have_css("img[src*='jumper.jpeg']")
     expect(page).not_to have_css("img[src*='jumpsuit.jpg']")
   end
-
 end

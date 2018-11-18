@@ -4,3 +4,5 @@
 <% end %>
 
 <p><%= @message %></p>
+
+<%= button_to 'Save combination', combinations_path, :method=>:post, params:{"combination"=>{item_1_id: @item_1_id, item_2_id: @item_2_id}} %>

@@ -10,7 +10,6 @@ RSpec.feature 'Sign up, log in, log out', type: :feature do
     expect(page).to have_selector('#user_password')
   end
 
-
   scenario 'allows a user to sign up' do
     sign_up('testuser1@gmail.com')
     expect(page).to have_content('Welcome! You have signed up successfully.')
@@ -33,11 +32,11 @@ RSpec.feature 'Sign up, log in, log out', type: :feature do
     expect(page).to have_content("Password confirmation doesn't match")
   end
 
-  scenario "user can log out" do
+  scenario 'user can log out' do
     sign_up('testuser1@gmail.com')
     expect(page).to have_content('Welcome! You have signed up successfully.')
-    click_link("Logout")
-    expect(page).to have_content("Signed out successfully")
+    click_link('Logout')
+    expect(page).to have_content('Signed out successfully')
   end
 
   scenario 'throws and error message is email is invalid' do
@@ -49,5 +48,4 @@ RSpec.feature 'Sign up, log in, log out', type: :feature do
     click_button('Sign up')
     expect(page).to have_content('Email is invalid')
   end
-
 end

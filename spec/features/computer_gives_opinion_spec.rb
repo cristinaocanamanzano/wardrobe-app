@@ -1,6 +1,8 @@
-require "rails_helper"
+# frozen_string_literal: true
 
-RSpec.feature "computer_matches_clothes" do
+require 'rails_helper'
+
+RSpec.feature 'computer_matches_clothes' do
   scenario 'no match' do
     sign_up('testuser1@gmail.com')
     add_item('clueless.jpg', 'navy', 'top')
@@ -8,7 +10,7 @@ RSpec.feature "computer_matches_clothes" do
     page.check('item-1')
     page.check('item-2')
     click_button 'Submit'
-    expect(page).to have_content("Fashion victim alert!!")
+    expect(page).to have_content('Fashion victim alert!!')
   end
 
   scenario 'match' do
@@ -20,5 +22,4 @@ RSpec.feature "computer_matches_clothes" do
     click_button 'Submit'
     expect(page).to have_content("Rollin' with the homies!")
   end
-
 end
