@@ -53,6 +53,7 @@ group :development, :test do
   gem 'rubocop', require: false
   gem 'simplecov', require: false
   gem 'simplecov-console', require: false
+  gem 'teaspoon-mocha'
 end
 
 group :development do
@@ -72,6 +73,9 @@ group :test do
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
   gem 'database_cleaner', require: false
+  gem 'poltergeist'
+  gem 'phantomjs', :require => 'phantomjs/poltergeist'
+  gem 'chai-rails', '~> 1.9', '>= 1.9.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
