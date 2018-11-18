@@ -15,6 +15,7 @@ before_script:
   - bundle
   - bundle exec rails db:create
   - bundle exec rails db:migrate RAILS_ENV=test
+  - curl -L https://github.com/mozilla/geckodriver/releases/download/v0.23.0/geckodriver-v0.23.0-linux64.tar.gz | tar xz
 
 
 test:
@@ -23,7 +24,7 @@ test:
 
 script:
   - bundle exec rspec
-  
+
 
 after_success:
   - coveralls
