@@ -25,6 +25,6 @@ class ClothesSelectionController < ApplicationController
     @message_2 = Occasion.new.return_match_message_2(occasion_1, occasion_2)
 
 
-    @message = Colour.new.return_match_message(main_colour, secondary_colour)
+    @message_1 = Colour.new.return_match_message(main_colour, secondary_colour)
   end
 end
