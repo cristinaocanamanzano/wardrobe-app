@@ -20,6 +20,16 @@ ActiveRecord::Schema.define(version: 2018_11_18_142118) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "combinations", force: :cascade do |t|
+    t.integer "item_1_id"
+    t.integer "item_2_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.index ["item_1_id"], name: "index_combinations_on_item_1_id"
+    t.index ["item_2_id"], name: "index_combinations_on_item_2_id"
+  end
+
   create_table "items", force: :cascade do |t|
     t.string "colour"
     t.string "image"
