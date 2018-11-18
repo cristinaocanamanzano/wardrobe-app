@@ -35,4 +35,15 @@ RSpec.feature 'uploading photos', type: :feature do
     expect(page).to have_css("img[src*='jumpsuit.jpg']")
   end
 
+  scenario 'A user can add formal or informal tags to their items' do
+    sign_up('testuser1@gmail.com')
+    click_link 'New Item'
+    attach_file('item[image]', File.join(Rails.root + 'spec/fixtures/clueless.jpg'))
+    select 'navy', from: 'item[colour]'
+    select 'top', from: 'item[clothes_type]'
+    select 'formal', from: 'item[clothes_occasion]'
+    click_button 'Create Item'
+    expect(page).to have_content("Occasion: formal")
+  end
+
 end
