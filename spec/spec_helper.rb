@@ -7,6 +7,7 @@ require 'simplecov-console'
 require 'rake'
 require_relative './features/web_helpers.rb'
 require 'pry'
+require 'capybara'
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new(
   [
@@ -125,3 +126,16 @@ RSpec.configure do |config|
   #   # as the one that triggered the failure.
   #   Kernel.srand config.seed
 end
+
+
+Capybara.register_driver :headless_firefox do |app|
+  browser_options = Selenium::WebDriver::Firefox::Options.new()
+  browser_options.args << '--headless'
+  Capybara::Selenium::Driver.new(
+    app,
+    browser: :firefox,
+    options: browser_options
+  )
+end
+
+Capybara.javascript_driver = :headless_firefox
