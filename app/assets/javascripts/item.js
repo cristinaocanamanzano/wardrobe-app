@@ -7,6 +7,7 @@ function compareClothes(){
 
 
 
+
 document.addEventListener("turbolinks:load", function(){
 
   $('#tops-carousel').on('afterChange', function(event, slick, currentSlide, nextSlide){
