@@ -36,20 +36,6 @@ rescue ActiveRecord::PendingMigrationError => e
 end
 RSpec.configure do |config|
 
-  config.before :all do
-    ENV['PRECOMPILE_ASSETS'] ||= begin
-      puts "Here ::::::::::::::"
-      case self.class.metadata[:type]
-      when :feature, :view
-        STDOUT.write "Precompiling assets..."
-
-        system "bundle exec rake assets:precompile > /dev/null 2>&1"
-
-        STDOUT.puts "\n Done."
-        Time.now.to_s
-      end
-    end
-  end
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
 
   # Use database cleaner to truncate tables- remove if too slow
