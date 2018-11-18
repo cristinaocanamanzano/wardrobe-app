@@ -137,5 +137,5 @@ Capybara.register_driver :headless_firefox do |app|
     options: browser_options
   )
 end
-
+#
 Capybara.javascript_driver = :headless_firefox

@@ -7,7 +7,7 @@ RSpec.feature 'clothes_matcher', type: :feature do
     scenario 'A user can see clothes combinations' do
       sign_up('testuser1@gmail.com')
       add_item("clueless.jpg", 'navy', 'top', 'formal')
-      click_link 'Explore'
+      click_link 'Clothes Carousel'
       expect(page).to have_content('Explore your closet')
       expect(page).to have_selector(:id, 'tops-carousel')
       expect(page).to have_selector(:id, 'bottoms-carousel')
@@ -17,7 +17,7 @@ RSpec.feature 'clothes_matcher', type: :feature do
       sign_up('testuser1@gmail.com')
       4.times { add_item("clueless.jpg", 'light-blue', 'top', 'formal')}
       3.times { add_item("clueless.jpg", 'yellow', 'bottom', 'formal') }
-      click_link 'Explore'
+      click_link 'Clothes Carousel'
       find('#tops-carousel').find('.slick-next').click
       # waiting for javascript to execute message
       sleep 2
@@ -28,7 +28,7 @@ RSpec.feature 'clothes_matcher', type: :feature do
       sign_up('testuser1@gmail.com')
       4.times { add_item("clueless.jpg", 'light-blue', 'top', 'formal') }
       3.times { add_item("clueless.jpg", 'black', 'bottom', 'formal') }
-      click_link 'Explore'
+      click_link 'Clothes Carousel'
       find('#tops-carousel').find('.slick-next').click
       # waiting for javascript to execute message
       sleep 2
