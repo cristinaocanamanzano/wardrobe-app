@@ -44,6 +44,9 @@ RSpec.feature 'uploading photos', type: :feature do
     select 'formal', from: 'item[clothes_occasion]'
     click_button 'Create Item'
     expect(page).to have_content("Item was successfully created")
+    expect(page).to have_content("Occasion: formal")
+    click_link 'Back'
+    expect(page).to have_content("Occasion: formal")
   end
 
 end
