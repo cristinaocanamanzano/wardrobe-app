@@ -3,9 +3,8 @@ require 'rails_helper.rb'
 
 RSpec.feature 'clothes_matcher', type: :feature do
   scenario 'A user can see clothes combinations' do
-    sign_up_helper
-    add_item("clueless.jpg")
-    click_link 'Back'
+    sign_up('testuser1@gmail.com')
+    add_item("clueless.jpg", 'navy', 'top')
     click_link 'Clothes Carousel'
     expect(page).to have_content('Explore your closet')
     expect(page).to have_selector(:id, 'tops-carousel')

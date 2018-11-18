@@ -12,7 +12,7 @@ RSpec.feature 'Sign up, log in, log out', type: :feature do
 
 
   scenario 'allows a user to sign up' do
-    sign_up_helper
+    sign_up('testuser1@gmail.com')
     expect(page).to have_content('Welcome! You have signed up successfully.')
   end
 
@@ -34,7 +34,7 @@ RSpec.feature 'Sign up, log in, log out', type: :feature do
   end
 
   scenario "user can log out" do
-    sign_up_helper
+    sign_up('testuser1@gmail.com')
     expect(page).to have_content('Welcome! You have signed up successfully.')
     click_link("Logout")
     expect(page).to have_content("Signed out successfully")
