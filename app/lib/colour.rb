@@ -24,9 +24,9 @@ class Colour
     color_rules.each do |hash|
       if hash.has_key?(item1)
         if hash[item1].include?(item2)
-           return "Rollin' with the homies!"
+         return "Snaps! Those colours are totally classic together..."
         else
-          return "Fashion victim alert!!"
+          return "As If! Those colours are 'whatever' together..."
         end
       end
     end

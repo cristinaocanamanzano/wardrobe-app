@@ -1,5 +1,6 @@
 <%= image_tag(item.image_url.to_s, width: 300) %><br>
 Colour: <%= item.colour %>
+Occasion: <%= item.clothes_occasion %>
  <input type="checkbox" name="item-<%=item.id%>" value=<%=item.id%> id=<%=item.id%> > <br>
 <%= link_to 'Show', item %>
 <%= link_to 'Edit', edit_item_path(item) %>
