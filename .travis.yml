@@ -18,6 +18,9 @@ before_script:
   - curl -L https://github.com/mozilla/geckodriver/releases/download/v0.23.0/geckodriver-v0.23.0-linux64.tar.gz | tar xz
   - export PATH=$(pwd):$PATH
 
+addons:
+  firefox: "49.0"
+
 test:
   adapter: postgresql
   database: travis_ci_test
