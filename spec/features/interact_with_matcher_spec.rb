@@ -5,7 +5,7 @@ RSpec.feature 'clothes_matcher', type: :feature do
   scenario 'A user can see clothes combinations' do
     sign_up('testuser1@gmail.com')
     add_item("clueless.jpg", 'navy', 'top', 'formal')
-    click_link 'Explore'
+    click_link 'Clothes Carousel'
     expect(page).to have_content('Explore your closet')
     expect(page).to have_selector(:id, 'tops-carousel')
     expect(page).to have_selector(:id, 'bottoms-carousel')
