@@ -19,11 +19,13 @@
 
 <div id="tops-carousel" class="slider">
   <% @tops.each do |item| %>
-    <div id="<%= item.id %>" class="item"><%= image_tag(item.image_url.to_s, width: 200)  %></div>
+    <div id="<%= item.id %>" class="item" data-colour="<%= item.colour %>"><%= image_tag(item.image_url.to_s, width: 200)  %></div>
   <% end %>
 </div>
 <div id="bottoms-carousel" class="slider">
   <% @bottoms.each do |item| %>
-    <div id="<%= item.id %>" class="item"><%= image_tag(item.image_url.to_s, width: 200)  %></div>
+    <div id="<%= item.id %>" class="item" data-colour="<%= item.colour %>"><%= image_tag(item.image_url.to_s, width: 200)  %></div>
   <% end %>
 </div>
+
+<p id="matcher-message"></p>
