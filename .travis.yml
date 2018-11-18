@@ -16,7 +16,7 @@ before_script:
   - bundle exec rails db:create
   - bundle exec rails db:migrate RAILS_ENV=test
   - curl -L https://github.com/mozilla/geckodriver/releases/download/v0.23.0/geckodriver-v0.23.0-linux64.tar.gz | tar xz
-
+  - export PATH=$(pwd):$PATH
 
 test:
   adapter: postgresql
