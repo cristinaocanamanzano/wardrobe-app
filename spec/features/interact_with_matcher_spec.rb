@@ -6,7 +6,7 @@ RSpec.feature 'clothes_matcher', type: :feature do
     sign_up_helper
     add_item("clueless.jpg")
     click_link 'Back'
-    click_link 'Explore'
+    click_link 'Clothes Carousel'
     expect(page).to have_content('Explore your closet')
     expect(page).to have_selector(:id, 'tops-carousel')
     expect(page).to have_selector(:id, 'bottoms-carousel')
