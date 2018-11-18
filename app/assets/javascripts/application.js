@@ -17,3 +17,4 @@
 //= require_tree .
 //= require item
 //= require clothes_carousel
+//= require colour
