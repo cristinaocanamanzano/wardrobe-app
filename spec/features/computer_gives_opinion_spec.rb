@@ -3,8 +3,8 @@ require "rails_helper"
 RSpec.feature "computer_matches_clothes" do
   scenario 'no match' do
     sign_up('testuser1@gmail.com')
-    add_item('clueless.jpg', 'navy', 'top')
-    add_item('jumpsuit.jpg', 'navy', 'top')
+    add_item('clueless.jpg', 'navy', 'top', 'formal')
+    add_item('jumpsuit.jpg', 'navy', 'top', 'formal')
     page.check('item-1')
     page.check('item-2')
     click_button 'Submit'
@@ -13,8 +13,8 @@ RSpec.feature "computer_matches_clothes" do
 
   scenario 'match' do
     sign_up('testuser1@gmail.com')
-    add_item('clueless.jpg', 'navy', 'top')
-    add_item('jumpsuit.jpg', 'red', 'top')
+    add_item('clueless.jpg', 'navy', 'top', 'formal')
+    add_item('jumpsuit.jpg', 'red', 'top', 'formal')
     page.check('item-1')
     page.check('item-2')
     click_button 'Submit'

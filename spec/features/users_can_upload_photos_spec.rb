@@ -19,7 +19,7 @@ RSpec.feature 'uploading photos', type: :feature do
 
   scenario "A user cannot see other users' items on the page" do
     sign_up('testuser1@gmail.com')
-    add_item("clueless.jpg", 'navy', 'top')
+    add_item("clueless.jpg", 'navy', 'top', 'formal')
     click_link 'Logout'
     sign_up('testuser2@gmail.com')
     expect(page).not_to have_css("img[src*='clueless.jpg']")
@@ -27,10 +27,10 @@ RSpec.feature 'uploading photos', type: :feature do
 
   scenario 'A user can only see their own pictures on the page' do
     sign_up('testuser1@gmail.com')
-    add_item("clueless.jpg", 'navy', 'top')
+    add_item("clueless.jpg", 'navy', 'top', 'formal')
     click_link 'Logout'
     sign_up('testuser2@gmail.com')
-    add_item("jumpsuit.jpg", 'navy', 'top')
+    add_item("jumpsuit.jpg", 'navy', 'top', 'formal')
     expect(page).not_to have_css("img[src*='clueless.jpg']")
     expect(page).to have_css("img[src*='jumpsuit.jpg']")
   end
