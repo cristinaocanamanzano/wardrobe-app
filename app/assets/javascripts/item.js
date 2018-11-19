@@ -13,9 +13,9 @@ function compareOccasion(){
 
 function isMatchOccasion(top, bottom){
   if (top === bottom) {
-    return "Well done looking sharp"
+    return "Dope, These items are meant for the same occasion"
   } else {
-    return "I suggest not to mix formal and informal"
+    return "Bummer, You have put a formal and an informal item together"
   }
 
 }
