@@ -35,6 +35,20 @@ RSpec.feature 'clothes_matcher', type: :feature do
       expect(page).to have_content('match')
     end
 
+    scenario 'A user cannot mismatch categories' do
+      sign_up('testuser1@gmail.com')
+      4.times { add_item("clueless.jpg", 'light-blue', 'top', 'formal') }
+      3.times { add_item("clueless.jpg", 'black', 'bottom', 'informal') }
+      add_item("clueless.jpg", 'black', 'bottom', 'formal')
+      click_link 'Clothes Carousel'
+      find('#tops-carousel').find('.slick-next').click
+      # waiting for javascript to execute message
+      sleep 2
+      expect(page).to have_content("Bummer, You have put a formal and an informal item together")
+      find('#bottoms-carousel').find('.slick-prev').click
+      expect(page).to have_content("Dope, These items are meant for the same occasion")
+    end
+
   end
 
 end
