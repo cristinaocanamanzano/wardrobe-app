@@ -14,5 +14,4 @@ def add_item(image, color, type, occasion)
   select type, from: 'item[clothes_type]'
   select occasion, from: 'item[clothes_occasion]'
   click_button 'Create Item'
-  click_link 'Back'
 end
