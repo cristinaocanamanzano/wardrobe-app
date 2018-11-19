@@ -21,7 +21,8 @@ class ClothesSelectionController < ApplicationController
     occasion_2 = @item_collection[1].clothes_occasion
     puts occasion_1
     puts occasion_2
-
+    @item_1_id = @item_collection[0].id
+    @item_2_id = @item_collection[1].id
     @message_2 = Occasion.new.return_match_message_2(occasion_1, occasion_2)
 
 

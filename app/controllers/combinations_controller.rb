@@ -2,6 +2,7 @@ class CombinationsController < ApplicationController
   def index
     @user = current_user
     @combinations = current_user.combinations
+    @items = current_user.items
   end
 
   def create
