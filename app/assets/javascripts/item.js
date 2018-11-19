@@ -5,6 +5,20 @@ function compareClothes(){
   $('#matcher-message').html(Colour.matcher(topColour, bottomColour));
 }
 
+function compareOccasion(){
+  var topOccasion = $('#tops-carousel .slick-current').attr('data-occasion');
+  var bottomOccasion = $('#bottoms-carousel .slick-current').attr('data-occasion');
+  $('#occasion-message').html(isMatchOccasion(topOccasion, bottomOccasion));
+}
+
+function isMatchOccasion(top, bottom){
+  if (top === bottom) {
+    return "Well done looking sharp"
+  } else {
+    return "I suggest not to mix formal and informal"
+  }
+
+}
 
 
 
@@ -12,10 +26,12 @@ document.addEventListener("turbolinks:load", function(){
 
   $('#tops-carousel').on('afterChange', function(event, slick, currentSlide, nextSlide){
     compareClothes();
+    compareOccasion();
   });
 
   $('#bottoms-carousel').on('afterChange', function(event, slick, currentSlide, nextSlide){
     compareClothes();
+    compareOccasion();
   });
 
 
