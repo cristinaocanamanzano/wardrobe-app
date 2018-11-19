@@ -13,7 +13,6 @@ RSpec.feature 'uploading photos', type: :feature do
     expect(page).to have_content('Item was successfully created')
     expect(page).to have_content('navy')
     expect(page).to have_css("img[src*='clueless.jpg']")
-    click_link 'Back'
     expect(page).to have_css("img[src*='clueless.jpg']")
   end
 
@@ -45,7 +44,6 @@ RSpec.feature 'uploading photos', type: :feature do
     click_button 'Create Item'
     expect(page).to have_content("Item was successfully created")
     expect(page).to have_content("Occasion: formal")
-    click_link 'Back'
     expect(page).to have_content("Occasion: formal")
   end
 

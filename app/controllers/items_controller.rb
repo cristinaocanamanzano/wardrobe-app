@@ -32,8 +32,7 @@ class ItemsController < ApplicationController
 
     respond_to do |format|
       if @item.save
-        format.html { redirect_to @item, notice: 'Item was successfully created.' }
-        format.json { render :show, status: :created, location: @item }
+        format.html { redirect_to items_path, notice: 'Item was successfully created.' }
       else
         format.html { render :new }
         format.json { render json: @item.errors, status: :unprocessable_entity }
@@ -46,8 +45,7 @@ class ItemsController < ApplicationController
   def update
     respond_to do |format|
       if @item.update(item_params)
-        format.html { redirect_to @item, notice: 'Item was successfully updated.' }
-        format.json { render :show, status: :ok, location: @item }
+        format.html { redirect_to items_path, notice: 'Item was successfully updated.' }
       else
         format.html { render :edit }
         format.json { render json: @item.errors, status: :unprocessable_entity }
@@ -66,12 +64,12 @@ class ItemsController < ApplicationController
   end
 
   private
-  
+
     # Use callbacks to share common setup or constraints between actions.
     def set_item
       @item = Item.find(params[:id])
     end
-  
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
       params.require(:item).permit(:colour, :image, :clothes_type, :clothes_occasion)
