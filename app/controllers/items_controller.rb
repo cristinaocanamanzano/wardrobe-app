@@ -8,8 +8,9 @@ class ItemsController < ApplicationController
   def index
     @user = current_user
     @items = @user.items
-    @tops = @items.select { |item| item.clothes_type == 'top' }
-    @bottoms = @items.select { |item| item.clothes_type == 'bottom' }
+
+    @tops = @items.select { |item| item.clothes_type == "top" }
+    @bottoms = @items.select { |item| item.clothes_type == "bottom" }
   end
 
   # GET /items/1
@@ -66,13 +67,9 @@ class ItemsController < ApplicationController
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
-  def set_item
-    @item = Item.find(params[:id])
-  end
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def item_params
+      params.require(:item).permit(:colour, :image, :clothes_type, :clothes_occasion)
+    end
 
-  # Never trust parameters from the scary internet, only allow the white list through.
-  def item_params
-    params.require(:item).permit(:colour, :image, :clothes_type)
-  end
 end

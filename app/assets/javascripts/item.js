@@ -1,11 +1,23 @@
 
-// $( document ).ready(function() {
-    //console.log( "ready!" );
-// });
+function compareClothes(){
+  var topColour = $('#tops-carousel .slick-current').attr('data-colour');
+  var bottomColour = $('#bottoms-carousel .slick-current').attr('data-colour');
+  $('#matcher-message').html(Colour.matcher(topColour, bottomColour));
+}
+
 
 
 
 document.addEventListener("turbolinks:load", function(){
+
+  $('#tops-carousel').on('afterChange', function(event, slick, currentSlide, nextSlide){
+    compareClothes();
+  });
+
+  $('#bottoms-carousel').on('afterChange', function(event, slick, currentSlide, nextSlide){
+    compareClothes();
+  });
+
 
 $('.slider').slick({
     arrows: true,

@@ -9,11 +9,12 @@ def sign_up(user_email)
   click_button('Sign up')
 end
 
-def add_item(image, color, type)
+def add_item(image, color, type, occasion)
   click_link 'New Item'
   attach_file('item[image]', File.join(Rails.root + 'spec/fixtures' + image))
   select color, from: 'item[colour]'
   select type, from: 'item[clothes_type]'
+  select occasion, from: 'item[clothes_occasion]'
   click_button 'Create Item'
   click_link 'Back'
 end

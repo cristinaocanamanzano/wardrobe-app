@@ -16,8 +16,21 @@ class ClothesSelectionController < ApplicationController
 
     main_colour = @item_collection[0].colour
     secondary_colour = @item_collection[1].colour
-    @item_1_id = @item_collection[0].id
-    @item_2_id = @item_collection[1].id
-    @message = Colour.new.return_match_message(main_colour, secondary_colour)
+
+    occasion_1 = @item_collection[0].clothes_occasion
+    occasion_2 = @item_collection[1].clothes_occasion
+    puts occasion_1
+    puts occasion_2
+
+    @message_2 = Occasion.new.return_match_message_2(occasion_1, occasion_2)
+
+
+    @message_1 = Colour.new.return_match_message(main_colour, secondary_colour)
+
+   puts @message_1
+   puts @message_2
+
+    @overall_message = Final_Judgement.new.overall_match(@message_1, @message_2)
   end
+
 end

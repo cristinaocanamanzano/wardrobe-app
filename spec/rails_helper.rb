@@ -35,7 +35,6 @@ rescue ActiveRecord::PendingMigrationError => e
   exit 1
 end
 RSpec.configure do |config|
-  # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
 
   # Use database cleaner to truncate tables- remove if too slow
   config.before(:each) do

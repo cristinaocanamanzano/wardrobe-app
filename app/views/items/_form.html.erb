@@ -22,6 +22,11 @@
   </div>
 
   <div class="field">
+    <%= form.label :clothes_occasion %>
+    <%= form.select :clothes_occasion, [['formal'], ['informal']] %>
+  </div>
+
+  <div class="field">
 
     <%= form.file_field :image %>
   </div>
