@@ -3,9 +3,9 @@ require "rails_helper"
 RSpec.feature "Saving Combinations" do
   scenario "User can save a favourite combination" do
     sign_up("test@test.com")
-    add_item('clueless.jpg', 'navy', 'top')
-    add_item('jumper.jpeg', 'pink', 'top')
-    add_item('jumpsuit.jpg', 'purple', 'top')
+    add_item('clueless.jpg', 'navy', 'top', 'formal')
+    add_item('jumper.jpeg', 'pink', 'top', 'informal')
+    add_item('jumpsuit.jpg', 'purple', 'top', 'formal')
     page.check('item-1')
     page.check('item-2')
     click_button 'Submit'
