@@ -7,11 +7,11 @@ RSpec.feature 'uploading photos', type: :feature do
     sign_up('testuser1@gmail.com')
     click_link 'New Item'
     attach_file('item[image]', File.join(Rails.root + 'spec/fixtures/clueless.jpg'))
-    select "navy", from: 'item[colour]'
-    select "top", from: 'item[clothes_type]'
+    select 'navy', from: 'item[colour]'
+    select 'top', from: 'item[clothes_type]'
     click_button 'Create Item'
     expect(page).to have_content('Item was successfully created')
-    expect(page).to have_content("navy")
+    expect(page).to have_content('navy')
     expect(page).to have_css("img[src*='clueless.jpg']")
     click_link 'Back'
     expect(page).to have_css("img[src*='clueless.jpg']")

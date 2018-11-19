@@ -1,0 +1,9 @@
+<div class='combination-div' id=<%=combination.id%>>
+    <div class="combination-individual-item">
+
+    <%  @first_item_id = combination.item_1_id %>
+    <% @item_1 = Item.find(@first_item_id) %>
+    <% @second_item_id = combination.item_2_id %>
+    <% @item_2 = Item.find(@second_item_id) %>
+      <%= image_tag(@item_1.image_url.to_s, width: 300) %> <%= image_tag(@item_2.image_url.to_s, width: 300) %></div>
+</div>

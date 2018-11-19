@@ -31,6 +31,8 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-coverage/*
+coverage/.resultset.json
+coverage/index.html
+coverage/.last_run.json
 .DS_Store
 Gemfile.lock

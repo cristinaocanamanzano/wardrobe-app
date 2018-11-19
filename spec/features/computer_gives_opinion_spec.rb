@@ -1,4 +1,8 @@
-require "rails_helper"
+# frozen_string_literal: true
+
+
+require 'rails_helper'
+
 
 RSpec.feature "computer_matches_clothes" do
   scenario 'no colour match' do
@@ -9,6 +13,7 @@ RSpec.feature "computer_matches_clothes" do
     page.check('item-2')
     click_button 'Submit'
     expect(page).to have_content("As If! Those colours are 'whatever' together...")
+
   end
 
   scenario 'colour match' do
@@ -71,5 +76,4 @@ RSpec.feature "computer_matches_clothes" do
     click_button 'Submit'
     expect(page).to have_content("Fashion victim...Please rethink your style choice")
   end
-
 end
