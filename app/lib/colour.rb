@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-
 class Colour
   SELECTION = %w[navy green red yellow brown gold silver black purple pink light-blue].freeze
 
@@ -19,17 +18,4 @@ class Colour
 
   ITEM_TYPE =  %w[top bottom].freeze
 
-  def return_match_message(item1, item2)
-    item1 = item1.to_sym
-    color_rules = COLOUR_RULES
-    color_rules.each do |hash|
-      if hash.key?(item1)
-        if hash[item1].include?(item2)
-         return "Snaps! Those colours are totally classic together..."
-        else
-          return "As If! Those colours are 'whatever' together..."
-        end
-      end
-    end
-  end
 end

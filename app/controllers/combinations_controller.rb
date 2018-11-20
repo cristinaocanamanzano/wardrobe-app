@@ -11,6 +11,12 @@ class CombinationsController < ApplicationController
    redirect_to items_url
   end
 
+  def destroy
+    @combination = Combination.find(params[:id])
+    @combination.destroy
+    redirect_to combinations_url, notice: 'Your combination has been deleted'
+  end
+
   private
 
   def combination_params

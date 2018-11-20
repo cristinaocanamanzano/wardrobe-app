@@ -22,6 +22,8 @@ function isMatchOccasion(top, bottom){
 
 
 
+
+
 document.addEventListener("turbolinks:load", function(){
 
   $('#tops-carousel').on('afterChange', function(event, slick, currentSlide, nextSlide){
