@@ -2,7 +2,6 @@
 
 class ItemsController < ApplicationController
   before_action :set_item, only: %i[show edit update destroy]
-
   # GET /items
   # GET /items.json
   def index

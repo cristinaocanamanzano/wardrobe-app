@@ -18,3 +18,4 @@
 //= require item
 //= require clothesCarousel
 //= require colour
+//= require filter
