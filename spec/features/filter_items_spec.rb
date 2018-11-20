@@ -25,7 +25,7 @@ RSpec.feature 'Items filter', type: :feature do
       expect(page).not_to have_css("img[src*='jumper.jpeg']")
     end
 
-    scenario 'Users can filter by occasion' do
+    scenario 'Users can clear filters' do
       sign_up('testuser1@gmail.com')
       add_item("clueless.jpg", 'navy', 'top', 'formal')
       add_item("jumper.jpeg", 'yellow', 'bottom', 'informal')
