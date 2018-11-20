@@ -1,23 +1,43 @@
 <p id="notice"><%= notice %></p>
 
+<h1 class='main-heading'>Your Wardrobe</h1>
 
+<div id='filters' class='filter-container'>
+  <div class='filter-attributes'>
+    <h2 class='sub-heading'>Colour</h2>
+    <input type='checkbox' name='colour' id='red' value='red' class="checkbox-filter" >Red</input>
+    <input type='checkbox' name='colour' id='light-blue' value='light-blue' class="checkbox-filter" >Light blue</input>
+    <input type='checkbox' name='colour' id='green' value='green' class="checkbox-filter">Green</input>
+    <input type='checkbox' name='colour' id='yellow' value='yellow' class="checkbox-filter">Yellow</input>
+    <input type='checkbox' name='colour' id='navy' value='navy' class="checkbox-filter">Navy</input>
+    <input type='checkbox' name='colour' id='brown' value='brown'class="checkbox-filter" >Brown</input>
+    <input type='checkbox' name='colour' id='gold' value='gold' class="checkbox-filter">Gold</input>
+    <input type='checkbox' name='colour' id='silver' value='silver' class="checkbox-filter">Silver</input>
+    <input type='checkbox' name='colour' id='black' value='black' class="checkbox-filter">Black</input>
+    <input type='checkbox' name='colour' id='purple' value='purple' class="checkbox-filter" >Purple</input>
+    <input type='checkbox' name='colour' id='pink' value='pink' class="checkbox-filter" >Pink</input>
+  </div>
+  <div class='filter-attributes'>
+    <h2 class='sub-heading'>Occasion</h2>
+    <input type='checkbox' name='occasion' id='formal' value='formal' class="checkbox-filter" >Formal</input>
+    <input type='checkbox' name='occasion' id='informal' value='informal' class="checkbox-filter"> Informal</input>
+  </div>
 
-<h1>Items</h1>
+  <div>
+    <br>
+    <input class="btn-action-clear" type='button' id='clear_all' value='Clear all'></input>
+  </div>
 
-
-
-
-  <h2>Tops</h2>
-  <% @tops.each do |item| %>
-    <%= render 'clothes_information', item: item %>
-  <% end %>
-
-  <h2>Bottoms</h2>
-  <% @bottoms.each do |item| %>
-    <%= render 'clothes_information', item: item %>
-  <% end %>
-
-
-
-
-<br>
+  <div class="section-tops">
+    <h2 class='sub-heading'>Tops</h2>
+    <% @tops.each do |item| %>
+      <%= render 'clothes_information', item: item %>
+    <% end %>
+  </div>
+  <div class="section-bottoms">
+    <h2 class='sub-heading'>Bottoms</h2>
+    <% @bottoms.each do |item| %>
+      <%= render 'clothes_information', item: item %>
+    <% end %>
+  </div>
+</div>
