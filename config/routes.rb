@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   resources :items
   resources :combinations
+  resources :suggestions
 
   authenticated :user do
     root to: 'items#index'
