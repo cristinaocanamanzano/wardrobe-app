@@ -36,7 +36,7 @@ RSpec.feature 'Sign up, log in, log out', type: :feature do
     sign_up('testuser1@gmail.com')
     expect(page).to have_content('Welcome! You have signed up successfully.')
     click_link('Logout')
-    expect(page).to have_content('Signed out successfully')
+    expect(page).to have_content('Log in')
   end
 
   scenario 'throws and error message is email is invalid' do
