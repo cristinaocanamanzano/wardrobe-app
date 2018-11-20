@@ -1,11 +1,16 @@
 
-<% @item_collection.each do |item| %>
-  <%= image_tag(item.image_url.to_s, width: 300) %>
-<% end %>
+<div class="favourites-container">
+  <% @item_collection.each do |item| %>
+    <%= image_tag(item.image_url.to_s, width: 300) %>
+  <% end %>
+</div>
 
+<%= button_to 'Save combination', combinations_path,
+    :method=>:post,
+    params:{"combination"=>{item_1_id: @item_1_id, item_2_id: @item_2_id}},
+    :class => 'btn-action-save'
+     %>
 
-<%= button_to 'Save combination', combinations_path, :method=>:post, params:{"combination"=>{item_1_id: @item_1_id, item_2_id: @item_2_id}} %>
-
-<p> Clothes: <%= @message_1 %></p>
-<p> Occasion: <%= @message_2 %> </p>
-<p> Overall: <%= @overall_message %> </p>
+<p class="message-computer-opinion"> Clothes: <%= @message_1 %></p>
+<p class="message-computer-opinion"> Occasion: <%= @message_2 %> </p>
+<p class="message-computer-opinion"> Overall: <%= @overall_message %> </p>
