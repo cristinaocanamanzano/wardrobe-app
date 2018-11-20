@@ -6,4 +6,5 @@
     <% @second_item_id = combination.item_2_id %>
     <% @item_2 = Item.find(@second_item_id) %>
       <%= image_tag(@item_1.image_url.to_s, width: 300) %> <%= image_tag(@item_2.image_url.to_s, width: 300) %></div>
+    <%= link_to 'Delete combination', combination, method: :delete %><br><br>
 </div>

@@ -15,5 +15,19 @@ RSpec.feature "Saving Combinations" do
       expect(page).to have_css("img[src*='jumper.jpeg']")
       expect(page).not_to have_css("img[src*='jumpsuit.jpg']")
     end
+   scenario "User can delete a saved combination" do
+     sign_up("test@test.com")
+     4.times { add_item("clueless.jpg", 'light-blue', 'top', 'formal')}
+     2.times { add_item("jumper.jpeg", 'yellow', 'bottom', 'formal') }
+     add_item("jumpsuit.jpg", 'yellow', 'bottom', 'formal')
+     click_link 'Clothes Carousel'
+     find('#tops-carousel').find('.slick-next').click
+     click_button 'Save combination'
+     click_link 'Favourites'
+     click_link 'Delete combination'
+     expect(page).not_to have_css("img[src*='clueless.jpg']")
+     expect(page).not_to have_css("img[src*='jumper.jpeg']")
+   end
+
   end
 end
