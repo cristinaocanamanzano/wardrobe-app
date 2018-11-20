@@ -16,5 +16,5 @@
 //= require turbolinks
 //= require_tree .
 //= require item
-//= require clothes_carousel
+//= require clothesCarousel
 //= require colour
