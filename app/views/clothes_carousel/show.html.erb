@@ -1,34 +1,20 @@
+<h1 class='main-heading'>Explore your closet</h1>
 
-<h1>Explore your closet</h1>
-<style media="screen">
-  .item {
-    height: 180px;
-    width: 180px;
-    color: red;
-
-    margin: 10px;
-  }
-  .your-class {
-    width: 75%;
-  }
-  body {
-    background: pink;
-  }
-
-</style>
-
-<div id="tops-carousel" class="slider">
-  <% @tops.each do |item| %>
-    <div id="<%= item.id %>" class="item" data-occasion="<%= item.clothes_occasion %>" data-colour="<%= item.colour %>"><%= image_tag(item.image_url.to_s, width: 200)  %></div>
-  <% end %>
-</div>
-<div id="bottoms-carousel" class="slider">
-  <% @bottoms.each do |item| %>
-    <div id="<%= item.id %>" class="item" data-occasion="<%= item.clothes_occasion %>" data-colour="<%= item.colour %>"><%= image_tag(item.image_url.to_s, width: 200)  %></div>
-  <% end %>
+<div class='slider-container'>
+  <div id='tops-carousel' class='slider'>
+    <% @tops.each do |item| %>
+      <div id="<%= item.id %>" class="item" data-occasion='<%= item.clothes_occasion %>' data-colour='<%= item.colour %>'><%= image_tag(item.image_url.to_s, width: 200)  %></div>
+    <% end %>
+  </div>
+  <div id='bottoms-carousel' class='slider'>
+    <% @bottoms.each do |item| %>
+      <div id='<%= item.id %>' class='item' data-occasion='<%= item.clothes_occasion %>' data-colour='<%= item.colour %>'><%= image_tag(item.image_url.to_s, width: 200)  %></div>
+    <% end %>
+  </div>
 </div>
 
-<p id="matcher-message"></p>
-<p id="occasion-message"></p>
 
-<button type="button" name="save-favs" id="save-favs-button">Save combination</button>
+<p class="message-computer-opinion" id="matcher-message"></p>
+<p class="message-computer-opinion" id="occasion-message"></p>
+
+<button class='btn-action-save' type="button" name="save-favs" id="save-favs-button">Save combination</button>
