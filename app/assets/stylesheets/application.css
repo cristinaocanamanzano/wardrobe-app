@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+ .item {
+   height: 180px;
+   width: 180px;
+   color: red;
+
+   margin: 10px;
+ }
+
+
+.slider-container {
+   background: pink;
+   padding: 30px;
+  }

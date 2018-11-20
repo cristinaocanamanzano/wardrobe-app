@@ -5,10 +5,10 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
@@ -22,8 +22,8 @@
       <% if user_signed_in? %>
         Logged in as <strong><%= current_user.email %></strong>.
         <%= link_to 'Items', items_path, :class => 'navbar-link' %> |
-        <%= link_to 'Clothes Carousel', clothes_carousel_path, :class => 'navbar-link' %> |
         <%= link_to 'New Item', new_item_path, :class => 'navbar-link' %> |
+        <%= link_to 'Clothes Carousel', clothes_carousel_path, :class => 'navbar-link' %> |
         <%= link_to 'Favourites', combinations_path, :class => 'navbar-link' %> |
         <%= link_to 'Suggestions', suggestions_path, :class => 'navbar-link' %> |
         <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
