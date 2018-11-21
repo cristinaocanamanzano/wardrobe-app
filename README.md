@@ -1,9 +1,12 @@
-# Wardrobe-App
+'As If'
+------
+
+'So that no one will ever say "As If" to your outfit'
 
 Project description 
 ------
 
-An app to help people find clothes that match, which reduces time spent getting ready in the morning.
+An app to help people find clothes that match, which reduces time spent getting ready in the morning. The app is inspired by the film "Clueless", where the main character selects her clothes from her digital wardrobe. Our app name is based on a quote from the film.
 
 User Stories
 ------
