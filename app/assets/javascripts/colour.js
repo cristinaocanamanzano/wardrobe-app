@@ -17,11 +17,14 @@ var Colour = (function(){
         for (var i = 0; i <= COLOUR_RULES.length; i+=1) {
           if (COLOUR_RULES[i].hasOwnProperty(item1)) {
               if (COLOUR_RULES[i][item1].includes(item2)){
-                  return 'match';
+                var positive_message = ["It's a colour match! Snaps, those colours are totally classic together...", "It's a colour match! Courageous fashion effort, those colours look great together.", "It's a colour match! Phat."]
+                 return positive_message[Math.floor(Math.random() * positive_message.length)]
+                 ;
 
           }
         } else {
-          return 'FASHION VICTIM';
+          var negative_message = ["No colour match. As If! Those colours are 'whatever' together...", "No colour match. Please, those colours are totally buggin' together. Try again.", "No colour match. At best it's a Monet", "No colour match. Totally toe up."]
+          return negative_message[Math.floor(Math.random() * negative_message.length)]
         }
      }
    }

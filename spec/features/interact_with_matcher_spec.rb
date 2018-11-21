@@ -23,7 +23,8 @@ RSpec.feature 'clothes_matcher', type: :feature do
       find('#tops-carousel').find('.slick-next').click
       # waiting for javascript to execute message
       sleep 2
-      expect(page).to have_content('FASHION VICTIM')
+
+      expect(page).to have_content("No colour match.")
     end
 
     scenario 'A user gets a happy message for a matched outfit' do
@@ -34,7 +35,8 @@ RSpec.feature 'clothes_matcher', type: :feature do
       find('#tops-carousel').find('.slick-next').click
       # waiting for javascript to execute message
       sleep 2
-      expect(page).to have_content('match')
+
+      expect(page).to have_content("It's a colour match!")
     end
 
     scenario 'A user cannot mismatch categories' do
@@ -46,9 +48,9 @@ RSpec.feature 'clothes_matcher', type: :feature do
       find('#tops-carousel').find('.slick-next').click
       # waiting for javascript to execute message
       sleep 2
-      expect(page).to have_content("Bummer, You have put a formal and an informal item together")
+      expect(page).to have_content("No occasion match.")
       find('#bottoms-carousel').find('.slick-prev').click
-      expect(page).to have_content("Dope, These items are meant for the same occasion")
+      expect(page).to have_content("Occasion match!")
     end
 
   end

@@ -13,15 +13,14 @@ function compareOccasion(){
 
 function isMatchOccasion(top, bottom){
   if (top === bottom) {
-    return "Dope, These items are meant for the same occasion"
+    var positive_message = ["Occasion match! Dope, these items are meant for the same occasion", "Occasion match! Classic" , "Occasion match! Check it, it's the bomb."]
+     return positive_message[Math.floor(Math.random() * positive_message.length)]
   } else {
-    return "Bummer, You have put a formal and an informal item together"
+    var negative_message = ["No occasion match. Bummer, You have put a formal and an informal item together", "No occasion match. Fashion Victim."]
+    return negative_message[Math.floor(Math.random() * negative_message.length)]
   }
 
 }
-
-
-
 
 
 document.addEventListener("turbolinks:load", function(){
