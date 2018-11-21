@@ -25,6 +25,11 @@ function isMatchOccasion(top, bottom){
 
 document.addEventListener("turbolinks:load", function(){
 
+  $(document).ready(function(){
+    compareClothes();
+    compareOccasion();
+  })
+
   $('#tops-carousel').on('afterChange', function(event, slick, currentSlide, nextSlide){
     compareClothes();
     compareOccasion();
