@@ -9,6 +9,7 @@
         null,
         1,
         1,
+        1,
         null,
         null
       ],
@@ -26,10 +27,18 @@
         null
       ],
       "/Users/laura/Projects/wardrobe-app/app/helpers/clothes_carousel_helper.rb": [
+        null,
+        null,
         1,
         null
       ],
       "/Users/laura/Projects/wardrobe-app/app/helpers/clothes_selection_helper.rb": [
+        null,
+        null,
+        1,
+        null
+      ],
+      "/Users/laura/Projects/wardrobe-app/app/helpers/combinations_helper.rb": [
         1,
         null
       ],
@@ -45,6 +54,10 @@
         1,
         null
       ],
+      "/Users/laura/Projects/wardrobe-app/app/helpers/suggestions_helper.rb": [
+        1,
+        null
+      ],
       "/Users/laura/Projects/wardrobe-app/app/helpers/welcome_helper.rb": [
         null,
         null,
@@ -54,6 +67,7 @@
       "/Users/laura/Projects/wardrobe-app/app/models/item.rb": [
         null,
         null,
+        1,
         1,
         1,
         1,
@@ -74,7 +88,7 @@
         null,
         null,
         1,
-        207,
+        336,
         null,
         null,
         null,
@@ -100,7 +114,7 @@
         null,
         null,
         1,
-        80,
+        120,
         null,
         null,
         null,
@@ -111,71 +125,36 @@
         null
       ],
       "/Users/laura/Projects/wardrobe-app/app/lib/colour.rb": [
-        1,
-        1,
         null,
         1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
         1,
         null,
         1,
-        8,
-        8,
-        8,
-        16,
-        8,
-        3,
-        null,
-        5,
         null,
         null,
         null,
         null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
         null,
         null
       ],
-      "/Users/laura/Projects/wardrobe-app/app/lib/occasion.rb": [
+      "/Users/laura/Projects/wardrobe-app/app/models/combination.rb": [
         1,
-        null,
-        null,
-        null,
         1,
-        null,
-        8,
-        6,
-        null,
-        2,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/laura/Projects/wardrobe-app/app/lib/final_judgement.rb": [
         1,
-        null,
         1,
-        8,
-        2,
-        null,
-        6,
-        null,
-        null,
         null
       ]
     },
-    "timestamp": 1542570318
+    "timestamp": 1542819548
   }
 }

@@ -10,6 +10,7 @@ RSpec.feature 'editing items', type: :feature do
     select 'red', from: 'item[colour]'
     select 'bottom', from: 'item[clothes_type]'
     click_button 'Update Item'
+    sleep 20
     expect(page).to have_content('red')
   end
 end

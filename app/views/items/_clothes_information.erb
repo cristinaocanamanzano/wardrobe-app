@@ -1,6 +1,6 @@
 <div class="grid-items" data-colour="<%= item.colour %>" data-occasion="<%= item.clothes_occasion %>">
-
-
+  Colour: <%= item.colour %>
+  Occasion: <%= item.clothes_occasion %>
   <%= image_tag(item.image_url.to_s, :class => 'clothes-image') %><br>
   <%= link_to 'Edit', edit_item_path(item), :class => 'clothes-link' %>
   <%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'clothes-link' %><br><br>
