@@ -3,12 +3,10 @@ class SuggestionsController < ApplicationController
     @user = current_user
     items = current_user.items
     combinations = @user.combinations
-    tops =  combinations.pluck(:item_1_id)
-    bottoms =  combinations.pluck(:item_2_id)
-
-    @computer_choice_top = tops.sample
-    @computer_choice_bottom = bottoms.sample
-    @top = items.find(@computer_choice_top)
-    @bottom = items.find(@computer_choice_bottom)
+    random_combination = combinations.sample
+    top_id = random_combination.item_1_id
+    bottom_id = random_combination.item_2_id
+    @top = items.find(top_id)
+    @bottom = items.find(bottom_id)
   end
 end
