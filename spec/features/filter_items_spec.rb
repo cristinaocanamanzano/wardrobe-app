@@ -8,7 +8,7 @@ RSpec.feature 'Items filter', type: :feature do
       add_item("clueless.jpg", 'navy', 'top', 'formal')
       add_item("jumper.jpeg", 'yellow', 'bottom', 'formal')
       add_item("jumpsuit.jpg", 'navy', 'bottom', 'formal')
-      page.check('navy')
+      find('#navy-checkmark').click
       expect(page).to have_css("img[src*='clueless.jpg']")
       expect(page).to have_css("img[src*='jumpsuit.jpg']")
       expect(page).not_to have_css("img[src*='jumper.jpeg']")
@@ -19,7 +19,7 @@ RSpec.feature 'Items filter', type: :feature do
       add_item("clueless.jpg", 'navy', 'top', 'formal')
       add_item("jumper.jpeg", 'yellow', 'bottom', 'informal')
       add_item("jumpsuit.jpg", 'navy', 'bottom', 'informal')
-      page.check('formal')
+      find('#formal-checkmark').click
       expect(page).to have_css("img[src*='clueless.jpg']")
       expect(page).not_to have_css("img[src*='jumpsuit.jpg']")
       expect(page).not_to have_css("img[src*='jumper.jpeg']")
@@ -30,7 +30,7 @@ RSpec.feature 'Items filter', type: :feature do
       add_item("clueless.jpg", 'navy', 'top', 'formal')
       add_item("jumper.jpeg", 'yellow', 'bottom', 'informal')
       add_item("jumpsuit.jpg", 'navy', 'bottom', 'informal')
-      page.check('formal')
+      find('#formal-checkmark').click
       click_button 'Clear all'
       expect(page).to have_css("img[src*='clueless.jpg']")
       expect(page).to have_css("img[src*='jumpsuit.jpg']")

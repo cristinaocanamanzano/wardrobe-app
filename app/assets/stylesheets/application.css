@@ -1,3 +1,5 @@
+
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -13,16 +15,223 @@
  *= require_tree .
  *= require_self
  */
- .item {
-   height: 180px;
-   width: 180px;
-   color: red;
 
-   margin: 10px;
+ /* General Application */
+
+ html, body {
+   font-family: 'Archivo', sans-serif;
+   padding: 0px;
+   margin: 0px;
+   overflow-x: hidden;
  }
 
+ nav {
+   margin: 10px 0px;
+   display: flex;
+   background: #1e152a;
+   justify-content: space-around;
+   padding: 10px;
+   width: 100%;
+ }
 
-.slider-container {
-   background: pink;
-   padding: 30px;
+ a.navbar-link {
+   font-size: 1.1em;
+   color: #ded8d8;
+   margin-right: 10px;
+ }
+
+ .main-heading {
+   margin-top: 30px;
+   font-size: 2.5em;
+   text-align: center;
+ }
+ .sub-heading {
+   margin-bottom: 2px;
+   margin-top: 30px;
+   font-size: 1.5em;
+   text-align: center;
+   border-bottom: white solid 3px;
+ }
+
+/* Items page */
+
+.filter-container {
+  width: 100%;
+}
+
+.filter-colour, .filter-occasion {
+  background: #134074;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 4px;
+  color: #ded8d8;
+  font-size: 1em;
+  border-radius: 5px;
+}
+
+.filter-colour {
+  margin-top: 5px;
+  width: 90%;
+}
+.filter-occasion {
+  width: 20%;
+}
+
+.filter-border {
+  margin-top: -5px;
+  padding: 10px;
+}
+
+.border-span {
+  margin: auto;
+  width: 300px;
+  height: 1px;
+  background: black;
+  border-radius: 10px;
+}
+
+/* Customize the label (the container) */
+.container {
+  display: block;
+  position: relative;
+  padding: 10px 3px 0px 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 1.2em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  padding-top: 1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: #134074;
+  font-size: 1em;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  right: 30px;
+  top: 0px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.section-clothes {
+  width: 90%;
+  margin: auto;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.clothes-image {
+  width: 170px;
+  height: 200px;
+}
+
+a.clothes-link {
+  margin-left: 32px;
+}
+/* Buttons */
+
+.btn-action-clear {
+  display: block;
+  margin: auto;
+  border-radius: 3px;
+}
+
+  .item {
+    height: 180px;
+    width: 200px;
+    color: red;
+    margin: 10px;
   }
+
+
+ .slider-container {
+    background: black;
+    padding: 30px;
+    width: 70%;
+    overflow: hidden;
+    margin: auto;
+   }
+
+ .slick-slide {
+   opacity: 0.7;
+   filter: grayscale(100%);
+ }
+
+ .slick-current {
+   opacity: 1;
+   filter: grayscale(0%);
+ }
+
+ div[aria-hidden='true'] {
+   opacity: 0.3;
+ }
+
+ .carousel-container {
+   width: 100%;
+ }
+
+ #save-favs-button {
+   margin-left: calc(50%  - 53px);
+   padding: 3px;
+   margin-top: 4px;
+ }
+
+.messages-carousel {
+  width: 96%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: -12px;
+  margin-bottom: 20px;
+}
+.messages-carousel-headings {
+  width: 96%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.message-computer-opinion {
+
+}

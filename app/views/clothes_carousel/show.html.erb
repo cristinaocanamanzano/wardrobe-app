@@ -1,20 +1,22 @@
 <h1 class='main-heading'>Explore your closet</h1>
 
-<div class='slider-container'>
-  <div id='tops-carousel' class='slider'>
-    <% @tops.each do |item| %>
-      <div id="<%= item.id %>" class="item" data-occasion='<%= item.clothes_occasion %>' data-colour='<%= item.colour %>'><%= image_tag(item.image_url.to_s, width: 200)  %></div>
-    <% end %>
+<div class="carousel-container">
+  <div class='slider-container'>
+    <div id='tops-carousel' class='slider'>
+      <% @tops.each do |item| %>
+        <div id="<%= item.id %>" class="item" data-occasion='<%= item.clothes_occasion %>' data-colour='<%= item.colour %>'><%= image_tag(item.image_url.to_s, width: 200, height: 220)  %></div>
+      <% end %>
+    </div>
+    <div id='bottoms-carousel' class='slider'>
+      <% @bottoms.each do |item| %>
+        <div id='<%= item.id %>' class='item' data-occasion='<%= item.clothes_occasion %>' data-colour='<%= item.colour %>'><%= image_tag(item.image_url.to_s, width: 200, height: 220)  %></div>
+      <% end %>
+    </div>
   </div>
-  <div id='bottoms-carousel' class='slider'>
-    <% @bottoms.each do |item| %>
-      <div id='<%= item.id %>' class='item' data-occasion='<%= item.clothes_occasion %>' data-colour='<%= item.colour %>'><%= image_tag(item.image_url.to_s, width: 200)  %></div>
-    <% end %>
+  <button class='btn-action-save' type="button" name="save-favs" id="save-favs-button">Save combination</button>
+
+  <div class="messages-carousel">
+    <span><h4 class="messages-carousel-headings"> Colours: </h4> <div class="message-computer-opinion" id="matcher-message"></div></span>
+    <span><h4 class="messages-carousel-headings"> Occasion: </h4> <div class="message-computer-opinion" id="occasion-message"></div></span>
   </div>
 </div>
-
-
-<h4> Colours: </h4> <div class="message-computer-opinion" id="matcher-message"></div> <br>
-<h4> Occasion: </h4> <div class="message-computer-opinion" id="occasion-message"></div> <br>
-
-<button class='btn-action-save' type="button" name="save-favs" id="save-favs-button">Save combination</button>
