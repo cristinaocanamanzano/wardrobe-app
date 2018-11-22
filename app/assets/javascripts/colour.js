@@ -18,16 +18,16 @@ var Colour = (function(){
           if (COLOUR_RULES[i].hasOwnProperty(item1)) {
               if (COLOUR_RULES[i][item1].includes(item2)){
                 var positive_message = ["It's a colour match! Snaps, those colours are totally classic together...", "It's a colour match! Courageous fashion effort, those colours look great together.", "It's a colour match! Phat."]
-                 return positive_message[Math.floor(Math.random() * positive_message.length)]
-                 ;
+                return positive_message[Math.floor(Math.random() * positive_message.length)]
 
-          }
         } else {
           var negative_message = ["No colour match. As If! Those colours are 'whatever' together...", "No colour match. Please, those colours are totally buggin' together. Try again.", "No colour match. At best it's a Monet", "No colour match. Totally toe up."]
           return negative_message[Math.floor(Math.random() * negative_message.length)]
         }
      }
    }
+}
+
    return({
      matcher: return_match_message,
      rules: COLOUR_RULES
