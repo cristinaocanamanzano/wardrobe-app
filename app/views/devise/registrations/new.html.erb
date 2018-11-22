@@ -1,34 +1,35 @@
 <h1 class="main-heading">Sign up</h1>
+<div class="form-container">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+    <div class="field">
+      <%= f.label :email, :class => 'sub-heading' %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => 'field-input' %>
+    </div>
 
-  <div class="field">
-    <%= f.label :email, :class => 'sub-heading' %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => 'field-input' %>
-  </div>
+    <div class="field">
+     <%= f.label :username, :class => 'sub-heading' %>
+     <%= f.text_field :user_name, autofocus: true, :class => 'field-input' %>
+   </div>
 
-  <div class="field">
-   <%= f.label :username, :class => 'sub-heading' %>
-   <%= f.text_field :user_name, autofocus: true, :class => 'field-input' %>
- </div>
+    <div class="field">
+      <%= f.label :password, :class => 'sub-heading'  %>
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "new-password", :class => 'field-input' %>
+    </div>
 
-  <div class="field">
-    <%= f.label :password, :class => 'sub-heading'  %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password", :class => 'field-input' %>
-  </div>
+    <div class="field">
+      <%= f.label :password_confirmation, :class => 'sub-heading'  %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", :class => 'field-input' %>
+    </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation, :class => 'sub-heading'  %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", :class => 'field-input' %>
-  </div>
+    <div class="actions">
+      <%= f.submit "Sign up", :class => 'btn-happy'%>
+    </div>
+  <% end %>
 
-  <div class="actions">
-    <%= f.submit "Sign up", :class => 'btn-happy'%>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+  <!-- <%= render "devise/shared/links" %> -->
+</div>
