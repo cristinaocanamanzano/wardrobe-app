@@ -18,6 +18,8 @@
 
  /* General Application */
 
+
+
  html, body {
    font-family: 'Archivo', sans-serif;
    padding: 0px;
@@ -34,7 +36,7 @@
    width: 100%;
  }
 
- a.navbar-link {
+ a.navbar-link, span.navbar-link {
    font-size: 1.1em;
    color: #ded8d8;
    margin-right: 10px;
@@ -45,13 +47,70 @@
    font-size: 2.5em;
    text-align: center;
  }
- .sub-heading {
+ .sub-heading, .min-heading {
    margin-bottom: 2px;
    margin-top: 30px;
    font-size: 1.5em;
    text-align: center;
    border-bottom: white solid 3px;
  }
+
+ a.sub-heading {
+   margin-left: calc(50% - 95px);
+   text-decoration: none;
+   border-bottom: #981f1f solid 2px;
+   margin-bottom: 20px;
+ }
+
+ select {
+   width: 100px;
+ }
+
+ .form-select, label[for=user_remember_me]  {
+   margin-left: calc(50% - 45px);
+ }
+
+.form-btn-choice, .btn-happy {
+  margin-left: calc(50% - 30px);
+}
+
+.btn-danger {
+  background: #981f1f;
+  color: white;
+  margin-left: calc(50% - 55px);
+  margin-bottom: 20px;
+}
+
+.message-danger {
+  width: 190px;
+  text-align: center;
+  border-bottom: #981f1f solid 2px;
+  margin-left: calc(50% - 90px);
+}
+
+input.field-input {
+  width: 175px;
+  text-align: center;
+  margin-left: calc(50% - 85px);
+}
+
+i {
+  margin-top: -20px;
+  text-align: center;
+  margin-left: calc(50% - 115px);
+}
+.long-i {
+    margin-left: calc(50% - 150px);
+}
+
+em {
+  text-align: center;
+  margin-left: calc(50% - 55px);
+}
+
+input#user_remember_me {
+  margin-left: calc(50% - 10px);
+}
 
 /* Items page */
 

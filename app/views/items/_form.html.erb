@@ -12,26 +12,26 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :colour %>
-    <%= form.select(:colour, Colour::SELECTION) %>
+    <%= form.label :colour, :class => 'sub-heading' %>
+    <span class='form-select'><%= form.select(:colour, Colour::SELECTION) %></span>
   </div>
 
   <div class="field">
-    <%= form.label :type %>
-    <%= form.select :clothes_type, [['top'], ['bottom']]  %>
+    <%= form.label :type, :class => 'sub-heading' %>
+    <span class='form-select' ><%= form.select :clothes_type, [['top'], ['bottom']]  %></span>
   </div>
 
   <div class="field">
-    <%= form.label :clothes_occasion %>
-    <%= form.select :clothes_occasion, [['formal'], ['informal']] %>
+    <%= form.label :clothes_occasion, :class => 'sub-heading' %>
+    <span class='form-select' >    <%= form.select :clothes_occasion, [['formal'], ['informal']] %></span>
   </div>
 
-  <div class="field">
+  <div class="field form-btn-choice">
 
     <%= form.file_field :image %>
   </div>
 
-  <div class="actions">
+  <div class="actions form-btn-choice">
     <%= form.submit %>
   </div>
 <% end %>
