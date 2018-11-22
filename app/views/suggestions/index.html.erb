@@ -1,9 +1,7 @@
-<h1>My suggestions</h1>
+<h1 class='main-heading'>My suggestions</h1>
+  <div class="suggestions-clothes">
+    <span class='image-suggestion'><%= image_tag(@top.image_url.to_s, width: 180, height: 200)%></span>
+    <span class='image-suggestion'><%= image_tag(@bottom.image_url.to_s, width: 180, height: 200)%></span>
+  </div>
 
-
-
-<%= image_tag(@top.image_url.to_s, width: 200, height: 240)%> <br>
-
-<%= image_tag(@bottom.image_url.to_s, width: 200, height: 240)%>
-
-<%= button_to "Show me another one", suggestions_path, :method => :get %>
+  <%= button_to "Show me another one", suggestions_path, :method => :get, :class => 'btn-suggest' %>

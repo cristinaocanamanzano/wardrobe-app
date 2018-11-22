@@ -1,37 +1,38 @@
-<%= form_with(model: item, local: true) do |form| %>
-  <% if item.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(item.errors.count, "error") %> prohibited this item from being saved:</h2>
 
-      <ul>
-      <% item.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+  <%= form_with(model: item, local: true) do |form| %>
+    <% if item.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(item.errors.count, "error") %> prohibited this item from being saved:</h2>
+
+        <ul>
+        <% item.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= form.label :colour, :class => 'sub-heading' %>
+      <span class='form-select'><%= form.select(:colour, Colour::SELECTION) %></span>
+    </div>
+
+    <div class="field">
+      <%= form.label :type, :class => 'sub-heading' %>
+      <span class='form-select' ><%= form.select :clothes_type, [['top'], ['bottom']]  %></span>
+    </div>
+
+    <div class="field">
+      <%= form.label :clothes_occasion, :class => 'sub-heading' %>
+      <span class='form-select' >    <%= form.select :clothes_occasion, [['formal'], ['informal']] %></span>
+    </div>
+
+    <div class="field form-btn-choice">
+
+      <%= form.file_field :image %>
+    </div>
+
+    <div class="actions form-btn-choice">
+      <%= form.submit %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :colour, :class => 'sub-heading' %>
-    <span class='form-select'><%= form.select(:colour, Colour::SELECTION) %></span>
-  </div>
-
-  <div class="field">
-    <%= form.label :type, :class => 'sub-heading' %>
-    <span class='form-select' ><%= form.select :clothes_type, [['top'], ['bottom']]  %></span>
-  </div>
-
-  <div class="field">
-    <%= form.label :clothes_occasion, :class => 'sub-heading' %>
-    <span class='form-select' >    <%= form.select :clothes_occasion, [['formal'], ['informal']] %></span>
-  </div>
-
-  <div class="field form-btn-choice">
-
-    <%= form.file_field :image %>
-  </div>
-
-  <div class="actions form-btn-choice">
-    <%= form.submit %>
-  </div>
-<% end %>

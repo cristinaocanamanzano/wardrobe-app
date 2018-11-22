@@ -25,6 +25,11 @@
    padding: 0px;
    margin: 0px;
    overflow-x: hidden;
+   width: 100%;
+   background-image: url(/assets/hanger.jpg);
+   background-repeat: repeat;
+  background-size: contain;
+
  }
 
  nav {
@@ -52,7 +57,6 @@
    margin-top: 30px;
    font-size: 1.5em;
    text-align: center;
-   border-bottom: white solid 3px;
  }
 
  a.sub-heading {
@@ -150,6 +154,18 @@ input#user_remember_me {
   border-radius: 10px;
 }
 
+#edit_user, .form-container {
+  background: white;
+  width: 300px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.form-container {
+  margin-bottom: 40px;
+  padding: 10px;
+}
 /* Customize the label (the container) */
 .container {
   display: block;
@@ -291,6 +307,35 @@ a.clothes-link {
   justify-content: space-around;
 }
 
+.suggestions-clothes {
+  margin-top: -10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-suggestion {
+  margin: auto;
+  margin-top: 1px;
+  border: black solid 3px;
+}
+
+.btn-suggest {
+  padding: 40px;
+  font-size: 1.2em;
+  float: right;
+  position: relative;
+  top: -270px;
+  right: 100px;
+  background: black;
+  color: white;
+  border-radius: 10px;
+}
+
+#notice {
+  margin-left: calc(50% - 70px);
+}
+
+/*
 .message-computer-opinion {
 
-}
+} */
