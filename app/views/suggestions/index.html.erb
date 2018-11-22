@@ -2,8 +2,8 @@
 
 
 
-<%= image_tag(@top.image_url.to_s, width: 200)%> <br>
+<%= image_tag(@top.image_url.to_s, width: 200, height: 240)%> <br>
 
-<%= image_tag(@bottom.image_url.to_s, width: 200)%>
+<%= image_tag(@bottom.image_url.to_s, width: 200, height: 240)%>
 
 <%= button_to "Show me another one", suggestions_path, :method => :get %>
