@@ -331,10 +331,28 @@ a.clothes-link {
   border-radius: 10px;
 }
 
-#notice {
+#notice, a.btn-action-delete {
   margin-left: calc(50% - 70px);
 }
 
+a.btn-action-delete {
+  text-decoration: none;
+  border-bottom:#981f1f solid 2px;
+}
+
+.combinations-container {
+  display: flex;
+}
+.container-combination {
+  margin: auto;
+  width: 440px;
+}
+.combination-item {
+  display: inline-block;
+}
+.container-combination img {
+  border: black 2px solid;
+}
 /*
 .message-computer-opinion {
 
