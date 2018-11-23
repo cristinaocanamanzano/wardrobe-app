@@ -58,10 +58,8 @@ How to Use
 
 How to Test
 -------
-- Run rspec in the terminal
+- Run RSpec in the terminal
 
-How to Deploy
--------
 
 How to Contribute to the Project
 -------
