@@ -7,7 +7,7 @@ Project description
 ------
 
 An app to help people find clothes that match, which reduces time spent getting ready in the morning. The app is inspired by the film "Clueless", where the main character selects her clothes from her digital wardrobe. Our app name is based on a quote from the film. 
-You can see a five minute demonstration of our app here (we are the first group), with details of our approach: https://www.facebook.com/MakersAcademy/videos/499418863884299/ 
+You can see a five minute demonstration of our app here (we are the first group, our demo starts fifteen seconds in), with details of our approach: https://www.facebook.com/MakersAcademy/videos/499418863884299/ 
 
 User Stories
 ------
