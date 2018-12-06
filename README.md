@@ -43,12 +43,24 @@ Features
 ------
 - Users can signup, login and logout
 - Users can add their items of clothing and see them displayed on a main page, categorised as tops and bottoms
+
+![screen shot 2018-12-06 at 22 25 05](https://user-images.githubusercontent.com/42243785/49615729-5a51d580-f9a6-11e8-8551-10eaf2372cfd.png)
+
 - Users can dynamically filter what items are shown to them by colour and occasion.  
 - Users can delete items they no longer like
 - Users can edit the photo, colour and occasion of their items. 
 - Users can scroll through their items and see messages displayed dynamically, telling them whether items match, based on colour and occasion. 
+
+![screen shot 2018-12-06 at 22 26 09](https://user-images.githubusercontent.com/42243785/49615725-56be4e80-f9a6-11e8-92e0-787c48db3a49.png)
+
 - Users can save an ensemble that they like and see it saved in their favourites page. They can delete the ensemble from their favourite page if they don't like it anymore. 
 - Users can ask for the computer to choose an outfit for them from their favourites collection, so that they don't have to worry about what to wear.
+
+
+Approach
+------
+
+We used Agile methods, working in sprints with stand-ups and retros every day. We used a trello board to keep track of what we needed to do. We used DISC methodology to help us communicated effectively. 
 
 How to Use
 --------
@@ -80,6 +92,7 @@ Technologies Used
 - [RSpec](http://rspec.info/)
 - [Capybara](https://github.com/teamcapybara/capybara)
 - [CarrierWave](https://github.com/carrierwaveuploader/carrierwave)
+- [jQuery](https://jquery.com/)
 
 By
 ---
