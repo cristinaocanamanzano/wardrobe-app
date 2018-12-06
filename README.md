@@ -6,7 +6,8 @@ As If
 Project description 
 ------
 
-An app to help people find clothes that match, which reduces time spent getting ready in the morning. The app is inspired by the film "Clueless", where the main character selects her clothes from her digital wardrobe. Our app name is based on a quote from the film.
+An app to help people find clothes that match, which reduces time spent getting ready in the morning. The app is inspired by the film "Clueless", where the main character selects her clothes from her digital wardrobe. Our app name is based on a quote from the film. 
+You can see a five minute demonstration of our app here (we are the first group) https://www.facebook.com/MakersAcademy/videos/499418863884299/ 
 
 User Stories
 ------
@@ -41,13 +42,13 @@ So that I can compare them by seeing them on the screen.
 Features
 ------
 - Users can signup, login and logout
-- Users can add their items of clothing and see them displayed on a main page, catagorised as tops and bottoms
+- Users can add their items of clothing and see them displayed on a main page, categorised as tops and bottoms
 - Users can dynamically filter what items are shown to them by colour and occasion.  
 - Users can delete items they no longer like
 - Users can edit the photo, colour and occasion of their items. 
 - Users can scroll through their items and see messages displayed dynamically, telling them whether items match, based on colour and occasion. 
 - Users can save an ensemble that they like and see it saved in their favourites page. They can delete the ensemble from their favourite page if they don't like it anymore. 
-- Users can ask for the computer to choose an outfit for them from their favouites collection, so that they don't have to worry about what to wear.
+- Users can ask for the computer to choose an outfit for them from their favourites collection, so that they don't have to worry about what to wear.
 
 
 How to Use
@@ -66,7 +67,7 @@ How to Contribute to the Project
 - Open a pull request 
 - Your pull request will require a review from one of the project collaborators 
 - Your pull request will fail if you test coverage is less than 95%, or if your tests fail
-- If you have an suggestions, or notice any bugs, please open an issue
+- If you have any suggestions, or notice any bugs, please open an issue
 
 Technologies Used 
 ------
