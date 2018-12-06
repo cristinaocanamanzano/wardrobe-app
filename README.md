@@ -7,7 +7,7 @@ Project description
 ------
 
 An app to help people find clothes that match, which reduces time spent getting ready in the morning. The app is inspired by the film "Clueless", where the main character selects her clothes from her digital wardrobe. Our app name is based on a quote from the film. 
-You can see a five minute demonstration of our app here (we are the first group) https://www.facebook.com/MakersAcademy/videos/499418863884299/ 
+You can see a five minute demonstration of our app here (we are the first group), with details of our approach: https://www.facebook.com/MakersAcademy/videos/499418863884299/ 
 
 User Stories
 ------
@@ -50,11 +50,12 @@ Features
 - Users can save an ensemble that they like and see it saved in their favourites page. They can delete the ensemble from their favourite page if they don't like it anymore. 
 - Users can ask for the computer to choose an outfit for them from their favourites collection, so that they don't have to worry about what to wear.
 
-
 How to Use
 --------
 - Clone this repo
-- Bundle install
+- Run bundle install
+- Run db:create
+- Run db:migrate
 - "Rails Server" in the console will run the application locally.
 
 How to Test
