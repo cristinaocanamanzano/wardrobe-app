@@ -7,7 +7,7 @@ Project description
 ------
 
 An app to help people find clothes that match, which reduces time spent getting ready in the morning. The app is inspired by the film "Clueless", where the main character selects her clothes from her digital wardrobe. Our app name is based on a quote from the film. 
-You can see a five minute demonstration of our app here (we are the first group, our demo starts fifteen seconds in), with details of our approach: https://www.facebook.com/MakersAcademy/videos/499418863884299/ 
+You can see a five minute presentation of our app here (we are the first group, our demo starts fifteen seconds in), with details of our approach and the challenges that we faced: https://www.facebook.com/MakersAcademy/videos/499418863884299/ 
 
 User Stories
 ------
@@ -60,7 +60,9 @@ Features
 Approach
 ------
 
-We used Agile methods, working in sprints with stand-ups and retros every day. We used a trello board to keep track of what we needed to do. We used DISC methodology to help us communicated effectively. 
+* We used Agile methods, working in sprints, with stand-ups and retros every day. 
+* We used a Trello board to keep track of what we needed to do. 
+* We used DISC methodology to help us communicate effectively. 
 
 How to Use
 --------
@@ -69,6 +71,8 @@ How to Use
 - Run db:create
 - Run db:migrate
 - "Rails Server" in the console will run the application locally.
+- This is the app on Heroku https://clueless-wardrobe.herokuapp.com/combinations 
+- However, we had some last minute bugs on Heroku that we struggled to fix in time. The database wipes itself after about an hour and the backgrounds don't appear. If we'd had more time on the project, fixing this would have been a top priority. 
 
 How to Test
 -------
@@ -81,6 +85,7 @@ How to Contribute to the Project
 - Your pull request will require a review from one of the project collaborators 
 - Your pull request will fail if you test coverage is less than 95%, or if your tests fail
 - If you have any suggestions, or notice any bugs, please open an issue
+
 
 Technologies Used 
 ------
