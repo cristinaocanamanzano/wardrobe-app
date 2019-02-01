@@ -1,4 +1,4 @@
-'As If'
+As If
 ------
 
 'So that no one will ever say "As If" to your outfit'
@@ -6,7 +6,8 @@
 Project description 
 ------
 
-An app to help people find clothes that match, which reduces time spent getting ready in the morning. The app is inspired by the film "Clueless", where the main character selects her clothes from her digital wardrobe. Our app name is based on a quote from the film.
+An app to help people find clothes that match, which reduces time spent getting ready in the morning. The app is inspired by the film "Clueless", where the main character selects her clothes from her digital wardrobe. Our app name is based on a quote from the film. 
+You can see a five minute presentation of our app here (we are the first group, our demo starts fifteen seconds in), with details of our approach and the challenges that we faced: https://www.facebook.com/MakersAcademy/videos/499418863884299/ 
 
 User Stories
 ------
@@ -41,20 +42,37 @@ So that I can compare them by seeing them on the screen.
 Features
 ------
 - Users can signup, login and logout
-- Users can add their items of clothing and see them displayed on a main page, catagorised as tops and bottoms
+- Users can add their items of clothing and see them displayed on a main page, categorised as tops and bottoms
+
+![screen shot 2018-12-06 at 22 25 05](https://user-images.githubusercontent.com/42243785/49615729-5a51d580-f9a6-11e8-8551-10eaf2372cfd.png)
+
 - Users can dynamically filter what items are shown to them by colour and occasion.  
 - Users can delete items they no longer like
 - Users can edit the photo, colour and occasion of their items. 
 - Users can scroll through their items and see messages displayed dynamically, telling them whether items match, based on colour and occasion. 
-- Users can save an ensemble that they like and see it saved in their favourites page. They can delete the ensemble from their favourite page if they don't like it anymore. 
-- Users can ask for the computer to choose an outfit for them from their favouites collection, so that they don't have to worry about what to wear.
 
+![screen shot 2018-12-06 at 22 26 09](https://user-images.githubusercontent.com/42243785/49615725-56be4e80-f9a6-11e8-92e0-787c48db3a49.png)
+
+- Users can save an ensemble that they like and see it saved in their favourites page. They can delete the ensemble from their favourite page if they don't like it anymore. 
+- Users can ask for the computer to choose an outfit for them from their favourites collection, so that they don't have to worry about what to wear.
+
+
+Approach
+------
+
+* We used Agile methods, working in sprints, with stand-ups and retros every day. 
+* We used a Trello board to keep track of what we needed to do. 
+* We used DISC methodology to help us communicate effectively. 
 
 How to Use
 --------
 - Clone this repo
-- Bundle install
+- Run bundle install
+- Run db:create
+- Run db:migrate
 - "Rails Server" in the console will run the application locally.
+- This is the app on Heroku https://clueless-wardrobe.herokuapp.com/combinations 
+- However, we had some last minute bugs on Heroku that we struggled to fix in time. The database wipes itself after about an hour and the backgrounds don't appear. If we'd had more time on the project, fixing this would have been a top priority. 
 
 How to Test
 -------
@@ -66,7 +84,8 @@ How to Contribute to the Project
 - Open a pull request 
 - Your pull request will require a review from one of the project collaborators 
 - Your pull request will fail if you test coverage is less than 95%, or if your tests fail
-- If you have an suggestions, or notice any bugs, please open an issue
+- If you have any suggestions, or notice any bugs, please open an issue
+
 
 Technologies Used 
 ------
@@ -78,6 +97,7 @@ Technologies Used
 - [RSpec](http://rspec.info/)
 - [Capybara](https://github.com/teamcapybara/capybara)
 - [CarrierWave](https://github.com/carrierwaveuploader/carrierwave)
+- [jQuery](https://jquery.com/)
 
 By
 ---
