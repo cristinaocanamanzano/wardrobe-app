@@ -1,7 +1,11 @@
 <h1 class='main-heading'>My suggestions</h1>
   <div class="suggestions-clothes">
-    <span class='image-suggestion'><%= image_tag(@top.image_url.to_s, width: 180, height: 200)%></span>
-    <span class='image-suggestion'><%= image_tag(@bottom.image_url.to_s, width: 180, height: 200)%></span>
+    <% if @top_id && @bottom_id %>
+      <span class='image-suggestion'><%= image_tag(@top.image_url.to_s, width: 180, height: 200)%></span>
+      <span class='image-suggestion'><%= image_tag(@bottom.image_url.to_s, width: 180, height: 200)%></span>
+    <% else %>
+      <p>You have not saved any favourite combination yet.</p>
+    <% end %>
   </div>
 
   <%= button_to "Show me another one", suggestions_path, :method => :get, :class => 'btn-suggest' %>
