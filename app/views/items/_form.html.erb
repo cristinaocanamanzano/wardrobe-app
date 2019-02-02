@@ -14,17 +14,17 @@
 
     <div class="field">
       <%= form.label :colour, :class => 'sub-heading' %>
-      <span class='form-select'><%= form.select(:colour, Colour::SELECTION) %></span>
+      <span class='form-select'><%= form.select(:colour, Colour::SELECTION, :prompt=>"Choose a colour") %></span>
     </div>
 
     <div class="field">
       <%= form.label :type, :class => 'sub-heading' %>
-      <span class='form-select' ><%= form.select :clothes_type, [['top'], ['bottom']]  %></span>
+      <span class='form-select' ><%= form.select :clothes_type, [['top'], ['bottom']], :prompt=>"Choose a type"  %></span>
     </div>
 
     <div class="field">
       <%= form.label :clothes_occasion, :class => 'sub-heading' %>
-      <span class='form-select' >    <%= form.select :clothes_occasion, [['formal'], ['informal']] %></span>
+      <span class='form-select' >    <%= form.select :clothes_occasion, [['formal'], ['informal']], :prompt=>"Choose an occasion" %></span>
     </div>
 
     <div class="field form-btn-choice">

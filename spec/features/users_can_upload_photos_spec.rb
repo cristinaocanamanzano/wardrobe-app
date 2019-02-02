@@ -9,6 +9,7 @@ RSpec.feature 'uploading photos', type: :feature do
     attach_file('item[image]', File.join(Rails.root + 'spec/fixtures/clueless.jpg'))
     select 'navy', from: 'item[colour]'
     select 'top', from: 'item[clothes_type]'
+    select 'formal', from: 'item[clothes_occasion]'
     click_button 'Create Item'
     expect(page).to have_content('Item was successfully created')
     expect(page).to have_content('navy')
@@ -44,7 +45,15 @@ RSpec.feature 'uploading photos', type: :feature do
     click_button 'Create Item'
     expect(page).to have_content("Item was successfully created")
     expect(page).to have_content("Occasion: formal")
-    expect(page).to have_content("Occasion: formal")
   end
 
+  scenario 'A user cannot create an item without uploading a picture' do
+    sign_up('testuser1@gmail.com')
+    click_link 'New Item'
+    select 'navy', from: 'item[colour]'
+    select 'top', from: 'item[clothes_type]'
+    select 'formal', from: 'item[clothes_occasion]'
+    click_button 'Create Item'
+    expect(page).to have_content("Image can't be blank")
+  end
 end
