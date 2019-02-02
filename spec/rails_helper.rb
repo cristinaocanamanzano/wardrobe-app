@@ -35,7 +35,7 @@ rescue ActiveRecord::PendingMigrationError => e
   exit 1
 end
 RSpec.configure do |config|
-
+  config.include Devise::Test::ControllerHelpers, type: :controller
   # Use database cleaner to truncate tables- remove if too slow
   config.before(:each) do
     DatabaseCleaner.strategy = :truncation
