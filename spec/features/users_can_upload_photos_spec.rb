@@ -9,6 +9,7 @@ RSpec.feature 'uploading photos', type: :feature do
     attach_file('item[image]', File.join(Rails.root + 'spec/fixtures/clueless.jpg'))
     select 'navy', from: 'item[colour]'
     select 'top', from: 'item[clothes_type]'
+    select 'formal', from: 'item[clothes_occasion]'
     click_button 'Create Item'
     expect(page).to have_content('Item was successfully created')
     expect(page).to have_content('navy')
@@ -43,7 +44,6 @@ RSpec.feature 'uploading photos', type: :feature do
     select 'formal', from: 'item[clothes_occasion]'
     click_button 'Create Item'
     expect(page).to have_content("Item was successfully created")
-    expect(page).to have_content("Occasion: formal")
     expect(page).to have_content("Occasion: formal")
   end
 
